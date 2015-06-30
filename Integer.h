@@ -70,8 +70,12 @@ FI shift_right_digits (II b, II e, int n, FI x) {
  */
 template <typename II1, typename II2, typename FI>
 FI plus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
-    // <your code>
-    return x;}
+    
+    
+    
+    return x;
+
+}
 
 // ------------
 // minus_digits
@@ -315,7 +319,9 @@ class Integer {
         // ----
 
         C _x; // the backing container
+        
         // <your data>
+        bool negative;
 
     private:
         // -----
@@ -361,6 +367,7 @@ class Integer {
          */
         Integer operator - () const {
             // <your code>
+            
             return Integer(0);}
 
         // -----------
