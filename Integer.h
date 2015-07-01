@@ -17,6 +17,8 @@
 #include <string>    // string
 #include <vector>    // vector
 
+using namespace std;
+
 // -----------------
 // shift_left_digits
 // -----------------
@@ -321,7 +323,7 @@ class Integer {
         C _x; // the backing container
         
         // <your data>
-        bool negative;
+        bool positive;
 
     private:
         // -----
@@ -329,8 +331,52 @@ class Integer {
         // -----
 
         bool valid () const { // class invariant
+            
             // <your code>
-            return true;}
+            for (const T& t : _x) {
+                if (t < 0 || t > 9)
+                    return false;
+            }
+            
+            return true;
+        
+        }
+        
+        Integer& basic_plus_eq(Integer& lhs, const Integer& rhs) {
+            C rev_sum;
+            bool carry = false;
+            int sum = 0;
+            C::iterator lb = lhs._x.begin();
+            C::iterator rb = rhs._x.begin();
+            C::iterator le = --lhs._x.end(); // -- to point at the last element
+            C::iterator re = --rhs._x.end();
+            while (le >= lb || re >= rb) {
+                if (le >= lb) {
+                    sum += *le;
+                    --le;
+                }
+                if (re >= rb) {
+                    sum += *re;
+                    --re
+                }
+                if (carry)
+                    sum += 1;
+                    
+                if (sum > 9) {
+                    rev_sum.push_back(sum - 10);
+                    carry = true;
+                }
+            }
+            
+            if (carry)
+                rev_sum.push_back(1);
+                
+            _x.resize(rev_sum.size());
+                
+            reverse_copy(rev_sum.begin(), rev_sum.end(), _x);
+            
+            return lhs;
+        }
 
     public:
         // ------------
@@ -342,7 +388,22 @@ class Integer {
          */
         Integer (int value) {
             // <your code>
-            assert(valid());}
+            if (value > 0) {
+                positive = true;
+            } else {
+                positive = false;
+                value = -value;
+            }
+            
+            while (value > 0) {
+                _x.push_back(value % 10);
+                value /= 10;
+            }
+            
+            reverse(_x.begin(), _x.end());
+            
+            assert(valid());
+        }
 
         /**
          * <your documentation>
@@ -350,8 +411,14 @@ class Integer {
          */
         explicit Integer (const std::string& value) {
             // <your code>
+            for (const char& c : value) {
+                _x.push_back(c - '0');
+            }
+            
             if (!valid())
-                throw std::invalid_argument("Integer::Integer()");}
+                throw invalid_argument("Integer::Integer()");
+            
+        }
 
         // Default copy, destructor, and copy assignment.
         // Integer (const Integer&);
@@ -366,9 +433,18 @@ class Integer {
          * <your documentation>
          */
         Integer operator - () const {
-            // <your code>
             
-            return Integer(0);}
+            // <your code>
+            Integer i(*this);
+            
+            if (i.positive)
+                i.positive = false;
+            else
+                i.positive = true;
+            
+            return i;
+        
+        }
 
         // -----------
         // operator ++
@@ -417,7 +493,19 @@ class Integer {
          */
         Integer& operator += (const Integer& rhs) {
             // <your code>
-            return *this;}
+            if (positive && rhs.positive) {
+                basic_plus_eq(*this, rhs);
+            } else if (positive && !rhs.positive) {
+                *this -= rhs;
+            } else if (!positive && rhs.positive) {
+                *this = Integer(rhs) -= this->abs();
+            } else {// (!positive && !rhs.positive)
+                basic_plus_eq(*this, rhs);
+                positive = false;
+            }
+            
+            return *this;
+        }
 
         // -----------
         // operator -=
@@ -485,7 +573,9 @@ class Integer {
          */
         Integer& operator >>= (int n) {
             // <your code>
-            return *this;}
+            
+            return *this;
+        }
 
         // ---
         // abs
@@ -496,8 +586,14 @@ class Integer {
          * <your documentation>
          */
         Integer& abs () {
+            
             // <your code>
-            return *this;}
+            if (!positive)
+                positive = true;
+            
+            return *this;
+        
+        }
 
         // ---
         // pow
@@ -509,7 +605,19 @@ class Integer {
          * @throws invalid_argument if ((this == 0) && (e == 0)) or (e < 0)
          */
         Integer& pow (int e) {
+            
             // <your code>
-            return *this;}};
+            if ((*this == 0 && e == 0) || (e < 0))
+                throw invalid_argument("Integer::pow()");
+            
+            for (int i = 1; i < e; ++i) {
+                operator*=(*this);
+            }
+            
+            return *this;
+        
+        }
+        
+};
 
 #endif // Integer_h
