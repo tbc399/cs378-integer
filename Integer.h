@@ -359,8 +359,10 @@ class Integer {
                     sum += *re;
                     --re
                 }
-                if (carry)
+                if (carry) {
                     sum += 1;
+                    carry = false;
+                }
                     
                 if (sum > 9) {
                     rev_sum.push_back(sum - 10);
@@ -375,6 +377,70 @@ class Integer {
                 
             reverse_copy(rev_sum.begin(), rev_sum.end(), _x);
             
+            return lhs;
+        }
+        
+        Integer& basic_minus_eq (Integer& lhs, const Integer& rhs) {
+            C rev_diff;
+            bool borrow = false;
+            int diff = 0;
+            C::iterator lb = lhs._x.begin();
+            C::iterator rb = rhs._x.begin();
+            C::iterator le = --lhs._x.end(); // -- to point at the last element
+            C::iterator re = --rhs._x.end();
+            bool rhs_greater_than_lhs = Integer(lhs).abs() < Integer(rhs).abs();
+            while (le >= lb || re >= rb) {
+                if (rhs_greater_than_lhs) {
+                    if (re >= rb) {
+                        if (borrow) {
+                            if (*re == 0) {
+                                diff = 9;
+                            } else {
+                                diff = *re - 1;
+                                borrow = false;
+                            }
+                        } else {
+                            diff = *re;
+                        }
+                        --re;
+                    }
+                    if (le >= lb) {
+                        if (diff >= *le)
+                            diff -= *le;
+                        else {
+                            diff = (diff + 10) - *le;
+                            borrow = true;
+                        }
+                        --le;
+                    }
+                } else {
+                    if (le >= lb) {
+                        if (borrow) {
+                            if (*le == 0) {
+                                diff = 9;
+                            } else {
+                                diff = *le - 1;
+                                borrow = false;
+                            }
+                        } else {
+                            diff = *le;
+                        }
+                        --le;
+                    }
+                    if (re >= rb) {
+                        if (diff >= *re)
+                            diff -= *re;
+                        else {
+                            diff = (diff + 10) - *re;
+                            borrow = true;
+                        }
+                        --re;
+                    }
+                }
+                rev_diff.push_back(diff);
+            }
+            _x.resize(rev_diff.size());
+            reverse_copy(rev_diff.begin(), rev_diff.end(), _x);
             return lhs;
         }
 
@@ -516,7 +582,21 @@ class Integer {
          */
         Integer& operator -= (const Integer& rhs) {
             // <your code>
-            return *this;}
+            if (positive && rhs.positive) {
+                basic_minus_eq(*this, rhs);
+            } else if (positive && !rhs.positive) {
+                *this += rhs;
+            } else if (!positive && rhs.positive) {
+                *this += rhs;
+                *this = -*this;
+            } else {// (!positive && !rhs.positive)
+                Integer i(rhs);
+                i.positive = true;
+                *this = basic_minus_eq(i, -(*this));
+            }
+            
+            return *this;
+        }
 
         // -----------
         // operator *=
