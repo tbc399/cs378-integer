@@ -16,6 +16,7 @@
 #include <stdexcept> // invalid_argument
 #include <string>    // string
 #include <vector>    // vector
+#include <algorithm>
 
 using namespace std;
 
@@ -443,6 +444,63 @@ class Integer {
             reverse_copy(rev_diff.begin(), rev_diff.end(), _x);
             return lhs;
         }
+        
+        Integer& basic_multiply (Integer& lhs, const Integer& rhs) {
+            
+            vector<vector<T>> nums(rhs._x.size());
+            
+            for (int i = 0; i < nums.size(); ++i) {
+                for (int j = 0; j < i; ++j) {
+                    nums[i].push_back(0);
+                }
+            }
+            
+            vector<vector<T>>::iterator num_it = nums.begin();
+            C::iterator lhs_it;
+            C::iterator rhs_it;
+            int carry = 0;
+            int prod;
+            for (rhs_it = rhs._x.end() - 1; rhs_it >= rhs._x.begin(); --rhs_it) {
+                
+                for (lhs_it = _x.end() - 1; lhs_it >= _x.begin(); --lhs_it) {
+                    
+                    prod = ((*rhs_it) * (*lhs_it)) + carry;
+                    carry = prod / 10;
+                    num_it->push_back(prod % 10);
+                    
+                }
+                
+                ++num_it;
+                
+            }
+            
+            int sum = 0;
+            carry = 0;
+            vector<T> rev_sum;
+            for (int i = 0; i < nums[nums.size() - 1].size(); ++i) {
+                for (const vector<T>& v : nums) {
+                    
+                    if (i < v.size()) {
+                        sum += v[i];
+                    }
+                    
+                }
+                sum += carry;
+                rev_sum.push_back(sum % 10);
+                carry = sum / 10;
+            }
+            
+            _x.resize(rev_sum.size());
+            reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
+            
+            if ((positive && rhs.positive) || (!positive && !rhs.positive))
+                positive = true;
+            else
+                positive = false;
+            
+            return *this;
+            
+        }
 
     public:
         // ------------
@@ -607,7 +665,42 @@ class Integer {
          */
         Integer& operator *= (const Integer& rhs) {
             // <your code>
-            return *this;}
+            if (this->_x.size() == 1 || rhs._x.size() == 1)
+                return basic_multiply(*this, rhs);
+            
+            unsigned int min_size = min(this->_x.size(), rhs._x.size());
+            Integer b(10);
+            b.pow(min_size - 1); 
+            
+            Integer x_0(0);
+            x_0._x.resize(_x.size() - min_size);
+            copy(_x.begin(), _x.begin() + (_x.size() - min_size), x_0._x.begin());
+            
+            Integer x_1(0);
+            x_1._x.resize(min_size);
+            copy(_x.begin() + (_x.size() - min_size), _x.end(), x_1._x.begin());
+            
+            Integer y_0(0);
+            y_0._x.resize(rhs._x.size() - min_size);
+            copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - min_size), y_0._x.begin());
+            
+            Integer y_1(0);
+            y_1._x.resize(min_size)
+            copy(rhs._x.begin() + (rhs._x.size() - min_size), rhs._x.end(), y_1._x.begin());
+            
+            Integer z_0 = x_0 *= y_0;
+            Integer z_1 = (x_1 *= y_0) += (x_0 *= y_1);
+            Integer z_2 = x_1 *= y_1;
+            
+            *this = (z_2 *= Integer(b).pow(2)) += ((z_1 -= z_2 -= z_0) *= b) += z_0;
+            
+            if ((positive && rhs.positive) || (!positive && !rhs.positive))
+                positive = true;
+            else
+                positive = false;
+            
+            return *this;
+        }
 
         // -----------
         // operator /=
@@ -619,7 +712,16 @@ class Integer {
          */
         Integer& operator /= (const Integer& rhs) {
             // <your code>
-            return *this;}
+            if (rhs == 0)
+                throw invalid_argument("Integer::operator/=()");
+            
+            if ((positive && rhs.positive) || (!positive && !rhs.positive))
+                positive = true;
+            else
+                positive = false;
+            
+            return *this;
+        }
 
         // -----------
         // operator %=
