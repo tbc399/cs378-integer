@@ -715,12 +715,24 @@ class Integer {
             if (rhs == 0)
                 throw invalid_argument("Integer::operator/=()");
             
+            if (*this < rhs)
+                return *this = 0;
+            if (*this == rhs)
+                return *this = 1;
+            
+            Integer i = *this;
+            Integer quotient = 0;
+            while (i >= rhs) {
+                i -= rhs;
+                ++quotient;
+            }
+            
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
                 positive = true;
             else
                 positive = false;
             
-            return *this;
+            return *this = quotient;
         }
 
         // -----------
@@ -733,7 +745,28 @@ class Integer {
          */
         Integer& operator %= (const Integer& rhs) {
             // <your code>
-            return *this;}
+            if (rhs <= 0)
+                throw invalid_argument("Integer::operator/=()");
+            
+            if (*this < rhs)
+                return *this = 0;
+            if (*this == rhs)
+                return *this = 1;
+            
+            Integer quotient = 0;
+            while (*this >= rhs) {
+                *this -= rhs;
+                ++quotient;
+            }
+            
+            if ((positive && rhs.positive) || (!positive && !rhs.positive))
+                positive = true;
+            else
+                positive = false;
+            
+            return *this;
+        
+        }
 
         // ------------
         // operator <<=
@@ -744,7 +777,27 @@ class Integer {
          */
         Integer& operator <<= (int n) {
             // <your code>
-            return *this;}
+            Integer i = *this;
+            vector<bool> bits(n, false);
+            
+            while (i > 0) {
+                if (Integer(i) %= 2 == 0)
+                    bits.push_back(false);
+                else
+                    bits.push_back(true);
+                
+                i /= 2;
+            }
+            unsigned long long j = 0;
+            *this = 0;
+            for (bool b : bits) {
+                if (b)
+                    *this += Integer(2).pow(j);
+                ++j;
+            }
+            
+            return *this;
+        }
 
         // ------------
         // operator >>=
