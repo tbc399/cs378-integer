@@ -176,7 +176,34 @@ class Integer {
      */
     friend bool operator < (const Integer& lhs, const Integer& rhs) {
         // <your code>
-        return false;}
+        if (!lhs.positive && rhs.positive)
+            return true;
+        else if (lhs.positive && !rhs.positive)
+            return false;
+        else if (!lhs.positive && (lhs._x.size() > rhs._x.size()))
+            return true;
+        else if (!lhs.positive && (lhs._x.size() < rhs._x.size()))
+            return false;
+        else if (lhs.positive && (lhs._x.size() > rhs._x.size()))
+            return false;
+        else if (lhs.positive && (lhs._x.size() < rhs._x.size()))
+            return true;
+        else {
+            C::iterator lb = lhs._x.begin();
+            c::iterator le = lhs._x.end();
+            C::iterator rb = rhs._x.begin();
+            while (lb < le) {
+                if (*lb < *rb)
+                    return true;
+                if (*lb > *rb)
+                    return false;
+                ++lb;
+                ++rb;
+            }
+            return false;
+        }
+        
+    }
 
     // -----------
     // operator <=
@@ -289,9 +316,16 @@ class Integer {
     /**
      * <your documentation>
      */
-    friend std::ostream& operator << (std::ostream& lhs, const Integer& rhs) {
+    friend ostream& operator << (ostream& lhs, const Integer& rhs) {
         // <your code>
-        return lhs << "0";}
+        string s;
+        if (!rhs.positive)
+            s += "-";
+        for (const T& t : rhs._x) {
+            s += to_string(t);
+        }
+        return lhs << s;
+    }
 
     // ---
     // abs
