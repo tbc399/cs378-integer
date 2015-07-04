@@ -155,7 +155,14 @@ class Integer {
      */
     friend bool operator == (const Integer& lhs, const Integer& rhs) {
         // <your code>
-        return false;}
+        if ((!lhs.positive && rhs.positive) || (lhs.positive && !rhs.positive))
+            return false;
+        else if (lhs._x.size() != rhs._x.size())
+            return false;
+        else {
+            return equal(lhs._x.begin(), lhs._x.end(), rhs._x.begin());
+        }
+    }
 
     // -----------
     // operator !=
@@ -368,6 +375,11 @@ class Integer {
         bool valid () const { // class invariant
             
             // <your code>
+            if (_x.size() == 1 && _x[0] == 0 && !positive)
+                return false;
+            if (_x.size() > 1 && _x[0] == 0)
+                return false;
+            
             for (const T& t : _x) {
                 if (t < 0 || t > 9)
                     return false;
@@ -569,8 +581,16 @@ class Integer {
          */
         explicit Integer (const std::string& value) {
             // <your code>
-            for (const char& c : value) {
-                _x.push_back(c - '0');
+            string::iterator it = value.begin();
+            if (*it == '-')
+                positive = false;
+            else
+                positive = true;
+                
+            for (it = value.begin() + 1; it < value.end(); ++it) {
+                if ((*it - '0') > 9 || (*it - '0') < 0)
+                    throw invalid_argument("Integer::Integer()");
+                _x.push_back(*it - '0');
             }
             
             if (!valid())
@@ -842,6 +862,32 @@ class Integer {
          */
         Integer& operator >>= (int n) {
             // <your code>
+            Integer i = *this;
+            vector<bool> bits;
+            
+            while (i > 0) {
+                if (Integer(i) %= 2 == 0)
+                    bits.push_back(false);
+                else
+                    bits.push_back(true);
+                
+                i /= 2;
+            }
+            
+            if (n >= bits.size()) {
+                if (!positive)
+                    positive = true;
+                return *this = 0;
+            }
+            
+            unsigned long long j = 0;
+            *this = 0;
+            C::iterator b_it;
+            for (b_it = begin() + n; b_it < bits.end(); ++b_it) {
+                if (*b_it)
+                    *this += Integer(2).pow(j);
+                ++j;
+            }
             
             return *this;
         }
