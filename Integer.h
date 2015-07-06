@@ -144,7 +144,7 @@ FI divides_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
 // Integer
 // -------
 
-template < typename T, typename C = std::vector<T> >
+template < typename T, typename C = vector<T> >
 class Integer {
     // -----------
     // operator ==
@@ -196,9 +196,9 @@ class Integer {
         else if (lhs.positive && (lhs._x.size() < rhs._x.size()))
             return true;
         else {
-            C::iterator lb = lhs._x.begin();
-            c::iterator le = lhs._x.end();
-            C::iterator rb = rhs._x.begin();
+            typename C::const_iterator lb = lhs._x.begin();
+            typename C::const_iterator le = lhs._x.end();
+            typename C::const_iterator rb = rhs._x.begin();
             while (lb < le) {
                 if (*lb < *rb)
                     return true;
@@ -392,37 +392,39 @@ class Integer {
         Integer& basic_plus_eq(Integer& lhs, const Integer& rhs) {
             C rev_sum;
             bool carry = false;
-            int sum = 0;
-            C::iterator lb = lhs._x.begin();
-            C::iterator rb = rhs._x.begin();
-            C::iterator le = --lhs._x.end(); // -- to point at the last element
-            C::iterator re = --rhs._x.end();
+            int sum;
+            typename C::iterator lb = lhs._x.begin();
+            typename C::const_iterator rb = rhs._x.begin();
+            typename C::iterator le = --lhs._x.end(); // -- to point at the last element
+            typename C::const_iterator re = --rhs._x.end();
             while (le >= lb || re >= rb) {
+                sum = 0;
                 if (le >= lb) {
                     sum += *le;
                     --le;
                 }
                 if (re >= rb) {
                     sum += *re;
-                    --re
+                    --re;
                 }
                 if (carry) {
                     sum += 1;
                     carry = false;
                 }
-                    
                 if (sum > 9) {
                     rev_sum.push_back(sum - 10);
                     carry = true;
+                } else {
+                    rev_sum.push_back(sum);
                 }
             }
             
             if (carry)
                 rev_sum.push_back(1);
-                
+            
             _x.resize(rev_sum.size());
                 
-            reverse_copy(rev_sum.begin(), rev_sum.end(), _x);
+            reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
             
             return lhs;
         }
@@ -430,11 +432,11 @@ class Integer {
         Integer& basic_minus_eq (Integer& lhs, const Integer& rhs) {
             C rev_diff;
             bool borrow = false;
-            int diff = 0;
-            C::iterator lb = lhs._x.begin();
-            C::iterator rb = rhs._x.begin();
-            C::iterator le = --lhs._x.end(); // -- to point at the last element
-            C::iterator re = --rhs._x.end();
+            int diff;
+            typename C::iterator lb = lhs._x.begin();
+            typename C::const_iterator rb = rhs._x.begin();
+            typename C::iterator le = --lhs._x.end(); // -- to point at the last element
+            typename C::const_iterator re = --rhs._x.end();
             bool rhs_greater_than_lhs = Integer(lhs).abs() < Integer(rhs).abs();
             while (le >= lb || re >= rb) {
                 if (rhs_greater_than_lhs) {
@@ -486,8 +488,16 @@ class Integer {
                 }
                 rev_diff.push_back(diff);
             }
+            
+            /* delete unnecessary zeros */
+            while (rev_diff.back() == 0 && rev_diff.size() > 1) {
+                rev_diff.pop_back();
+            }
+            
             _x.resize(rev_diff.size());
-            reverse_copy(rev_diff.begin(), rev_diff.end(), _x);
+            reverse_copy(rev_diff.begin(), rev_diff.end(), _x.begin());
+            if (rhs_greater_than_lhs)
+                lhs.positive = false;
             return lhs;
         }
         
@@ -501,9 +511,9 @@ class Integer {
                 }
             }
             
-            vector<vector<T>>::iterator num_it = nums.begin();
-            C::iterator lhs_it;
-            C::iterator rhs_it;
+            typename vector<vector<T>>::iterator num_it = nums.begin();
+            typename C::iterator lhs_it;
+            typename C::const_iterator rhs_it;
             int carry = 0;
             int prod;
             for (rhs_it = rhs._x.end() - 1; rhs_it >= rhs._x.begin(); --rhs_it) {
@@ -558,12 +568,15 @@ class Integer {
          */
         Integer (int value) {
             // <your code>
-            if (value > 0) {
+            if (value >= 0) {
                 positive = true;
             } else {
                 positive = false;
                 value = -value;
             }
+            
+            if (value == 0)
+                _x.push_back(0);
             
             while (value > 0) {
                 _x.push_back(value % 10);
@@ -581,13 +594,15 @@ class Integer {
          */
         explicit Integer (const std::string& value) {
             // <your code>
-            string::iterator it = value.begin();
-            if (*it == '-')
+            string::const_iterator it = value.begin();
+            if (*it == '-') {
                 positive = false;
+                ++it;
+            }
             else
                 positive = true;
                 
-            for (it = value.begin() + 1; it < value.end(); ++it) {
+            for (it = it; it < value.end(); ++it) {
                 if ((*it - '0') > 9 || (*it - '0') < 0)
                     throw invalid_argument("Integer::Integer()");
                 _x.push_back(*it - '0');
@@ -614,6 +629,9 @@ class Integer {
             
             // <your code>
             Integer i(*this);
+            
+            if (i == 0)
+                return i;
             
             if (i.positive)
                 i.positive = false;
@@ -674,9 +692,9 @@ class Integer {
             if (positive && rhs.positive) {
                 basic_plus_eq(*this, rhs);
             } else if (positive && !rhs.positive) {
-                *this -= rhs;
+                *this -= Integer(rhs).abs();
             } else if (!positive && rhs.positive) {
-                *this = Integer(rhs) -= this->abs();
+                *this = Integer(rhs) -= Integer(*this).abs();
             } else {// (!positive && !rhs.positive)
                 basic_plus_eq(*this, rhs);
                 positive = false;
@@ -695,19 +713,17 @@ class Integer {
         Integer& operator -= (const Integer& rhs) {
             // <your code>
             if (positive && rhs.positive) {
-                basic_minus_eq(*this, rhs);
+                return basic_minus_eq(*this, rhs);
             } else if (positive && !rhs.positive) {
-                *this += rhs;
+                return *this += rhs;
             } else if (!positive && rhs.positive) {
                 *this += rhs;
-                *this = -*this;
+                return *this = -*this;
             } else {// (!positive && !rhs.positive)
                 Integer i(rhs);
                 i.positive = true;
-                *this = basic_minus_eq(i, -(*this));
+                return basic_minus_eq(i, -(*this));
             }
-            
-            return *this;
         }
 
         // -----------
@@ -739,14 +755,14 @@ class Integer {
             copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - min_size), y_0._x.begin());
             
             Integer y_1(0);
-            y_1._x.resize(min_size)
+            y_1._x.resize(min_size);
             copy(rhs._x.begin() + (rhs._x.size() - min_size), rhs._x.end(), y_1._x.begin());
             
-            Integer z_0 = x_0 *= y_0;
-            Integer z_1 = (x_1 *= y_0) += (x_0 *= y_1);
-            Integer z_2 = x_1 *= y_1;
+            Integer z_0 = x_0 * y_0;
+            Integer z_1 = (x_1 * y_0) + (x_0 * y_1);
+            Integer z_2 = x_1 * y_1;
             
-            *this = (z_2 *= Integer(b).pow(2)) += ((z_1 -= z_2 -= z_0) *= b) += z_0;
+            *this = (z_2 * Integer(b).pow(2)) + ((z_1 - z_2 - z_0) * b) + z_0;
             
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
                 positive = true;
@@ -882,8 +898,8 @@ class Integer {
             
             unsigned long long j = 0;
             *this = 0;
-            C::iterator b_it;
-            for (b_it = begin() + n; b_it < bits.end(); ++b_it) {
+            typename C::iterator b_it;
+            for (b_it = bits.begin() + n; b_it < bits.end(); ++b_it) {
                 if (*b_it)
                     *this += Integer(2).pow(j);
                 ++j;
