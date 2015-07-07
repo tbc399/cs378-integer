@@ -17,6 +17,7 @@
 #include <string>    // string
 #include <vector>    // vector
 #include <algorithm>
+#include <cstdlib>
 
 using namespace std;
 
@@ -502,7 +503,7 @@ class Integer {
         }
         
         Integer& basic_multiply (Integer& lhs, const Integer& rhs) {
-            /*
+            
             vector<vector<T>> nums(rhs._x.size());
             
             for (int i = 0; i < nums.size(); ++i) {
@@ -514,10 +515,10 @@ class Integer {
             typename vector<vector<T>>::iterator num_it = nums.begin();
             typename C::iterator lhs_it;
             typename C::const_iterator rhs_it;
-            int carry = 0;
+            unsigned long carry;
             int prod;
             for (rhs_it = rhs._x.end() - 1; rhs_it >= rhs._x.begin(); --rhs_it) {
-                
+                carry = 0;
                 for (lhs_it = _x.end() - 1; lhs_it >= _x.begin(); --lhs_it) {
                     
                     prod = ((*rhs_it) * (*lhs_it)) + carry;
@@ -526,14 +527,17 @@ class Integer {
                     
                 }
                 
+                if (carry)
+                    num_it->push_back(carry);
                 ++num_it;
                 
             }
             
-            int sum = 0;
+            unsigned long sum;
             carry = 0;
             vector<T> rev_sum;
             for (int i = 0; i < nums[nums.size() - 1].size(); ++i) {
+                sum = 0;
                 for (const vector<T>& v : nums) {
                     
                     if (i < v.size()) {
@@ -545,20 +549,16 @@ class Integer {
                 rev_sum.push_back(sum % 10);
                 carry = sum / 10;
             }
-            for (T t : rev_sum) {
-                cout << t << "\n";
-            }
+            
+            if (carry)
+                rev_sum.push_back(carry);
+            
             _x.resize(rev_sum.size());
             reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
             
-            if ((positive && rhs.positive) || (!positive && !rhs.positive))
-                positive = true;
-            else
-                positive = false;
-            
             return *this;
-            */
             
+            /*
             if (lhs == 0 || rhs == 0)
                 return lhs = 0;
             if (lhs == 1)
@@ -599,7 +599,7 @@ class Integer {
                 p.positive = false;
                 
             return lhs = p;
-            
+            */
         }
 
     public:
@@ -778,30 +778,36 @@ class Integer {
          * <your documentation>
          */
         Integer& operator *= (const Integer& rhs) {
+            /*
             cout << *this << " x " << rhs << "\n";
             // <your code>
-            if (this->_x.size() == 1 || rhs._x.size() == 1)
+            if (this->_x.size() == 1 || rhs._x.size() == 1) {
+                cout << "sending (" << *this << ", " << rhs <<") to basic_multiply\n";
                 return basic_multiply(*this, rhs);
+            }
             
-            unsigned int min_size = min(this->_x.size(), rhs._x.size());
+            unsigned int split_len = min(this->_x.size(), rhs._x.size()) - 1;
             Integer b(10);
-            b.pow(min_size - 1); 
+            Integer n(b);
+            for (int i = 1; i < split_len; ++i) {
+                basic_multiply(b, n);
+            }
+            cout << "split_len: " << split_len << "\n";
+            Integer x_1(0);
+            x_1._x.resize(_x.size() - split_len);
+            copy(_x.begin(), _x.begin() + (_x.size() - split_len), x_1._x.begin());
             
             Integer x_0(0);
-            x_0._x.resize(_x.size() - min_size);
-            copy(_x.begin(), _x.begin() + (_x.size() - min_size), x_0._x.begin());
-            
-            Integer x_1(0);
-            x_1._x.resize(min_size);
-            copy(_x.begin() + (_x.size() - min_size), _x.end(), x_1._x.begin());
-            
-            Integer y_0(0);
-            y_0._x.resize(rhs._x.size() - min_size);
-            copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - min_size), y_0._x.begin());
+            x_0._x.resize(split_len);
+            copy(_x.begin() + (_x.size() - split_len), _x.end(), x_0._x.begin());
             
             Integer y_1(0);
-            y_1._x.resize(min_size);
-            copy(rhs._x.begin() + (rhs._x.size() - min_size), rhs._x.end(), y_1._x.begin());
+            y_1._x.resize(rhs._x.size() - split_len);
+            copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - split_len), y_1._x.begin());
+            
+            Integer y_0(0);
+            y_0._x.resize(split_len);
+            copy(rhs._x.begin() + (rhs._x.size() - split_len), rhs._x.end(), y_0._x.begin());
             
             cout << "x_0 = " << x_0 << "\n";
             cout << "x_1 = " << x_1 << "\n";
@@ -809,10 +815,30 @@ class Integer {
             cout << "y_1 = " << y_1 << "\n";
             
             Integer z_0 = x_0 * y_0;
-            Integer z_1 = (x_1 * y_0) + (x_0 * y_1);
+            Integer z_1 = (x_1 + y_0) * (x_0 + y_1);
             Integer z_2 = x_1 * y_1;
             
-            *this = (z_2 * Integer(b).pow(2)) + ((z_1 - z_2 - z_0) * b) + z_0;
+            cout << "z_0 = " << z_0 << "\n";
+            cout << "z_1 = " << z_1 << "\n";
+            cout << "z_2 = " << z_2 << "\n";
+            
+            Integer b_squared(b);
+            basic_multiply(b_squared, b);  
+            *this = (z_2 * b_squared) + ((z_1 - z_2 - z_0) * b) + z_0;
+            exit(0);
+            */
+            if (*this == 0 || rhs == 0)
+                return *this = 0;
+            if (*this == 1)
+                return *this = rhs;
+            if (*this == -1)
+                return *this = -rhs;
+            if (rhs == 1)
+                return *this;
+            if (rhs == -1)
+                return *this = -*this;
+            
+            basic_multiply(*this, rhs);
             
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
                 positive = true;
@@ -986,13 +1012,14 @@ class Integer {
          * @throws invalid_argument if ((this == 0) && (e == 0)) or (e < 0)
          */
         Integer& pow (int e) {
-            
+            cout << *this << ".pow("<<e<<")\n";
             // <your code>
             if ((*this == 0 && e == 0) || (e < 0))
                 throw invalid_argument("Integer::pow()");
-            
+            Integer n(*this);
             for (int i = 1; i < e; ++i) {
-                operator*=(*this);
+                cout << *this << " *= " << n << "\n";
+                *this *= n;
             }
             
             return *this;
