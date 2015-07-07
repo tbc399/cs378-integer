@@ -502,7 +502,7 @@ class Integer {
         }
         
         Integer& basic_multiply (Integer& lhs, const Integer& rhs) {
-            
+            /*
             vector<vector<T>> nums(rhs._x.size());
             
             for (int i = 0; i < nums.size(); ++i) {
@@ -545,7 +545,9 @@ class Integer {
                 rev_sum.push_back(sum % 10);
                 carry = sum / 10;
             }
-            
+            for (T t : rev_sum) {
+                cout << t << "\n";
+            }
             _x.resize(rev_sum.size());
             reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
             
@@ -555,6 +557,48 @@ class Integer {
                 positive = false;
             
             return *this;
+            */
+            
+            if (lhs == 0 || rhs == 0)
+                return lhs = 0;
+            if (lhs == 1)
+                return lhs = rhs;
+            if (lhs == -1)
+                return lhs = -rhs;
+            if (rhs == 1)
+                return lhs;
+            if (rhs == -1)
+                return lhs = -lhs;
+            
+            Integer i(0);
+            Integer n(0);
+            if (Integer(lhs).abs() <= Integer(rhs).abs()) {
+                i = lhs;
+                n = rhs;
+            } else {
+                i = rhs;
+                n = lhs;
+            }
+            
+            i.positive = true;
+            n.positive = true;
+            
+            Integer p(0);
+            while (i > 0) {
+                p += n;
+                --i;
+            }
+            
+            if (lhs.positive && rhs.positive)
+                p.positive = true;
+            if (!lhs.positive && !rhs.positive)
+                p.positive = true;
+            if (lhs.positive && !rhs.positive)
+                p.positive = false;
+            if (!lhs.positive && rhs.positive)
+                p.positive = false;
+                
+            return lhs = p;
             
         }
 
@@ -715,9 +759,9 @@ class Integer {
             if (positive && rhs.positive) {
                 return basic_minus_eq(*this, rhs);
             } else if (positive && !rhs.positive) {
-                return *this += rhs;
+                return *this += Integer(rhs).abs();
             } else if (!positive && rhs.positive) {
-                *this += rhs;
+                *this = Integer(*this).abs() += rhs;
                 return *this = -*this;
             } else {// (!positive && !rhs.positive)
                 Integer i(rhs);
@@ -734,6 +778,7 @@ class Integer {
          * <your documentation>
          */
         Integer& operator *= (const Integer& rhs) {
+            cout << *this << " x " << rhs << "\n";
             // <your code>
             if (this->_x.size() == 1 || rhs._x.size() == 1)
                 return basic_multiply(*this, rhs);
@@ -757,6 +802,11 @@ class Integer {
             Integer y_1(0);
             y_1._x.resize(min_size);
             copy(rhs._x.begin() + (rhs._x.size() - min_size), rhs._x.end(), y_1._x.begin());
+            
+            cout << "x_0 = " << x_0 << "\n";
+            cout << "x_1 = " << x_1 << "\n";
+            cout << "y_0 = " << y_0 << "\n";
+            cout << "y_1 = " << y_1 << "\n";
             
             Integer z_0 = x_0 * y_0;
             Integer z_1 = (x_1 * y_0) + (x_0 * y_1);

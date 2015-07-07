@@ -290,7 +290,7 @@ TEST(IntegerFixture, post_dec_1) {
 TEST(IntegerFixture, post_dec_2) {
     Integer<int> i(-1);
     Integer<int> j = i--;
-    ASSERT_EQ(0, i);
+    ASSERT_EQ(-2, i);
     ASSERT_EQ(-1, j);
 }
 
@@ -347,7 +347,7 @@ TEST(IntegerFixture, multiply_eq_7) {
     Integer<int> i(-5);
     Integer<int> j(-5);
     i *= j;
-    ASSERT_EQ(-25, i);
+    ASSERT_EQ(25, i);
 }
 
 TEST(IntegerFixture, multiply_eq_8) {
