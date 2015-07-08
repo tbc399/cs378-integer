@@ -1270,3 +1270,8 @@ TEST(IntegerFixture, mersenne_20_deque_timing) {
     //Integer<int, deque<int>>(2).pow(4423) - 1;
     ASSERT_TRUE(true);
 }
+
+TEST(IntegerFixture, mersenne_30_vector_timing) {
+	Integer<int> n = Integer<int>(2).pow(132049) - 1;
+	ASSERT_TRUE(true);
+}
