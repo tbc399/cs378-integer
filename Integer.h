@@ -310,9 +310,9 @@ class Integer {
             if (carry)
                 rev_sum.push_back(1);
             
-            _x.resize(rev_sum.size());
+            lhs._x.resize(rev_sum.size());
                 
-            reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
+            reverse_copy(rev_sum.begin(), rev_sum.end(), lhs._x.begin());
             
             return lhs;
         }
@@ -406,7 +406,7 @@ class Integer {
             int prod;
             for (rhs_it = rhs._x.end() - 1; rhs_it >= rhs._x.begin(); --rhs_it) {
                 carry = 0;
-                for (lhs_it = _x.end() - 1; lhs_it >= _x.begin(); --lhs_it) {
+                for (lhs_it = lhs._x.end() - 1; lhs_it >= lhs._x.begin(); --lhs_it) {
                     
                     prod = ((*rhs_it) * (*lhs_it)) + carry;
                     carry = prod / 10;
@@ -440,53 +440,11 @@ class Integer {
             if (carry)
                 rev_sum.push_back(carry);
             
-            _x.resize(rev_sum.size());
-            reverse_copy(rev_sum.begin(), rev_sum.end(), _x.begin());
+            lhs._x.resize(rev_sum.size());
+            reverse_copy(rev_sum.begin(), rev_sum.end(), lhs._x.begin());
             
-            return *this;
-            
-            /*
-            if (lhs == 0 || rhs == 0)
-                return lhs = 0;
-            if (lhs == 1)
-                return lhs = rhs;
-            if (lhs == -1)
-                return lhs = -rhs;
-            if (rhs == 1)
-                return lhs;
-            if (rhs == -1)
-                return lhs = -lhs;
-            
-            Integer i(0);
-            Integer n(0);
-            if (Integer(lhs).abs() <= Integer(rhs).abs()) {
-                i = lhs;
-                n = rhs;
-            } else {
-                i = rhs;
-                n = lhs;
-            }
-            
-            i.positive = true;
-            n.positive = true;
-            
-            Integer p(0);
-            while (i > 0) {
-                p += n;
-                --i;
-            }
-            
-            if (lhs.positive && rhs.positive)
-                p.positive = true;
-            if (!lhs.positive && !rhs.positive)
-                p.positive = true;
-            if (lhs.positive && !rhs.positive)
-                p.positive = false;
-            if (!lhs.positive && rhs.positive)
-                p.positive = false;
-                
-            return lhs = p;
-            */
+            return lhs;
+
         }
 
     public:
@@ -665,55 +623,7 @@ class Integer {
          * <your documentation>
          */
         Integer& operator *= (const Integer& rhs) {
-            /*
-            cout << *this << " x " << rhs << "\n";
             // <your code>
-            if (this->_x.size() == 1 || rhs._x.size() == 1) {
-                cout << "sending (" << *this << ", " << rhs <<") to basic_multiply\n";
-                return basic_multiply(*this, rhs);
-            }
-            
-            unsigned int split_len = min(this->_x.size(), rhs._x.size()) - 1;
-            Integer b(10);
-            Integer n(b);
-            for (int i = 1; i < split_len; ++i) {
-                basic_multiply(b, n);
-            }
-            cout << "split_len: " << split_len << "\n";
-            Integer x_1(0);
-            x_1._x.resize(_x.size() - split_len);
-            copy(_x.begin(), _x.begin() + (_x.size() - split_len), x_1._x.begin());
-            
-            Integer x_0(0);
-            x_0._x.resize(split_len);
-            copy(_x.begin() + (_x.size() - split_len), _x.end(), x_0._x.begin());
-            
-            Integer y_1(0);
-            y_1._x.resize(rhs._x.size() - split_len);
-            copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - split_len), y_1._x.begin());
-            
-            Integer y_0(0);
-            y_0._x.resize(split_len);
-            copy(rhs._x.begin() + (rhs._x.size() - split_len), rhs._x.end(), y_0._x.begin());
-            
-            cout << "x_0 = " << x_0 << "\n";
-            cout << "x_1 = " << x_1 << "\n";
-            cout << "y_0 = " << y_0 << "\n";
-            cout << "y_1 = " << y_1 << "\n";
-            
-            Integer z_0 = x_0 * y_0;
-            Integer z_1 = (x_1 + y_0) * (x_0 + y_1);
-            Integer z_2 = x_1 * y_1;
-            
-            cout << "z_0 = " << z_0 << "\n";
-            cout << "z_1 = " << z_1 << "\n";
-            cout << "z_2 = " << z_2 << "\n";
-            
-            Integer b_squared(b);
-            basic_multiply(b_squared, b);  
-            *this = (z_2 * b_squared) + ((z_1 - z_2 - z_0) * b) + z_0;
-            exit(0);
-            */
             if (*this == 0 || rhs == 0)
                 return *this = 0;
             if (*this == 1)
@@ -725,7 +635,74 @@ class Integer {
             if (rhs == -1)
                 return *this = -*this;
             
-            basic_multiply(*this, rhs);
+            // <your code>
+            if (this->_x.size() <= 4 || rhs._x.size() <= 4) {
+                basic_multiply(*this, rhs);
+            } else {
+                //cout << *this << " * " << rhs << "\n";
+                int split_len = min(this->_x.size(), rhs._x.size()) - 1;
+                
+                //cout << "split_len: " << split_len << "\n";
+                Integer x_1(0);
+                x_1._x.resize(_x.size() - split_len);
+                copy(_x.begin(), _x.begin() + (_x.size() - split_len), x_1._x.begin());
+                
+                Integer x_0(0);
+                typename C::iterator b1 = _x.begin() + (_x.size() - split_len);
+                typename C::iterator e1 = _x.end();
+                while (*b1 == 0 && b1 != e1){++b1;}
+                if (e1 - b1 > 0) {
+                    x_0._x.resize(e1 - b1);
+                    typename C::iterator x_it = x_0._x.begin();
+                    while (b1 != e1) {
+                        *x_it = *b1;
+                        ++b1;
+                        ++x_it;
+                    }
+                }
+                
+                Integer y_1(0);
+                y_1._x.resize(rhs._x.size() - split_len);
+                copy(rhs._x.begin(), rhs._x.begin() + (rhs._x.size() - split_len), y_1._x.begin());
+                
+                Integer y_0(0);
+                typename C::const_iterator b2 = rhs._x.begin() + (rhs._x.size() - split_len);
+                typename C::const_iterator e2 = rhs._x.end();
+                while (*b2 == 0 && b2 != e2){++b2;}
+                if (e2 - b2 > 0) {
+                    y_0._x.resize(e2 - b2);
+                    typename C::iterator y_it = y_0._x.begin();
+                    while (b2 != e2) {
+                        *y_it = *b2;
+                        ++b2;
+                        ++y_it;
+                    }
+                }
+                
+                //cout << "x_1 = " << x_1 << "\n";
+                //cout << "x_0 = " << x_0 << "\n";
+                //cout << "y_1 = " << y_1 << "\n";
+                //cout << "y_0 = " << y_0 << "\n";
+                
+                Integer z_0 = x_0 * y_0;
+                Integer z_1 = (x_1 + x_0) * (y_1 + y_0);
+                Integer z_2 = x_1 * y_1;
+                
+                //cout << "z_0 = " << z_0 << "\n";
+                //cout << "z_1 = " << z_1 << "\n";
+                //cout << "z_2 = " << z_2 << "\n";
+                
+                Integer B(10);
+                B.pow(split_len);
+                Integer B_2(10);
+                B_2.pow(split_len * 2);
+                
+                //cout << "("<<z_2<<" * "<<B_2<<") + (("<<z_1<<" - "<<z_2<<" - "<<z_0<<") * "<<B<<") + "<<z_0<< "\n";
+                *this = (z_2 * B_2) + ((z_1 - z_2 - z_0) * B) + z_0;
+                //*this = (B_2 + B)*x_1*y_1 - B*(x_1 - x_0)*(y_1 - y_0) + (B + 1)*x_0*y_0;
+            }
+            
+            //basic_multiply(*this, rhs);
             
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
                 positive = true;
@@ -934,10 +911,12 @@ class Integer {
             
             while (e > 0) {
                 if (e & 1) {
-                    *this *= base;
+                    //*this *= base;
+                    basic_multiply(*this, base);
                 }
                 e >>= 1;
-                base *= base;
+                //base *= base;
+                basic_multiply(base, base);
             }
             
             if (!pos && (exp % 2 != 0))

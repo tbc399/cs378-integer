@@ -3,6 +3,7 @@
 #include <string>   // string
 #include <utility>  // pair
 #include <iterator>
+#include <deque>
 
 #include "gtest/gtest.h"
 
@@ -378,10 +379,10 @@ TEST(IntegerFixture, multiply_eq_7) {
 }
 
 TEST(IntegerFixture, multiply_eq_8) {
-    Integer<int> i(100);
-    Integer<int> j(900);
+    Integer<int> i(12345);
+    Integer<int> j(6789);
     i *= j;
-    ASSERT_EQ(90000, i);
+    ASSERT_EQ(83810205, i);
 }
 
 TEST(IntegerFixture, multiply_eq_9) {
@@ -389,6 +390,13 @@ TEST(IntegerFixture, multiply_eq_9) {
     Integer<int> j(987654321);
     i *= j;
     ASSERT_EQ(Integer<int>("121932631112635269"), i);
+}
+
+TEST(IntegerFixture, multiply_eq_10) {
+    Integer<int> i(900);
+    Integer<int> j(100);
+    i *= j;
+    ASSERT_EQ(90000, i);
 }
 
 // ----------
@@ -627,6 +635,12 @@ TEST(IntegerFixture, pow_6) {
     Integer<int> i(2);
     i.pow(30);
     ASSERT_EQ(1073741824, i);
+}
+
+TEST(IntegerFixture, pow_7) {
+    Integer<int> i(10);
+    i.pow(8);
+    ASSERT_EQ(100000000, i);
 }
 
 // ----------
@@ -1243,4 +1257,16 @@ TEST(IntegerFixture, divide_digits_1) {
     divides_digits<VI,VI>(a.begin(), a.end(), b.begin(), b.end(), r.begin());
     vector<int> x{8};
     ASSERT_TRUE(equal(r.begin(), r.end(), x.begin()));
+}
+
+TEST(IntegerFixture, mersenne_20_vector_timing) {
+    Integer<int> n = Integer<int>(2).pow(4423) - 1;
+    //Integer<int>(2).pow(4423) - 1;
+    ASSERT_TRUE(true);
+}
+
+TEST(IntegerFixture, mersenne_20_deque_timing) {
+    Integer<int, deque<int>> n = Integer<int, deque<int>>(2).pow(4423) - 1;
+    //Integer<int, deque<int>>(2).pow(4423) - 1;
+    ASSERT_TRUE(true);
 }
