@@ -13,133 +13,15 @@
 
 #include <cassert>   // assert
 #include <iostream>  // ostream
+#include <sstream>
 #include <stdexcept> // invalid_argument
 #include <string>    // string
 #include <vector>    // vector
 #include <algorithm>
 #include <cstdlib>
+#include <iterator>
 
 using namespace std;
-
-// -----------------
-// shift_left_digits
-// -----------------
-
-/**
- * @param b an iterator to the beginning of an input  sequence (inclusive)
- * @param e an iterator to the end       of an input  sequence (exclusive)
- * @param x an iterator to the beginning of an output sequence (inclusive)
- * @return  an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the shift left of the input sequence into the output sequence
- * ([b, e) << n) => x
- */
-template <typename II, typename FI>
-FI shift_left_digits (II b, II e, int n, FI x) {
-    // <your code>
-    return x;}
-
-// ------------------
-// shift_right_digits
-// ------------------
-
-/**
- * @param b an iterator to the beginning of an input  sequence (inclusive)
- * @param e an iterator to the end       of an input  sequence (exclusive)
- * @param x an iterator to the beginning of an output sequence (inclusive)
- * @return  an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the shift right of the input sequence into the output sequence
- * ([b, e) >> n) => x
- */
-template <typename II, typename FI>
-FI shift_right_digits (II b, II e, int n, FI x) {
-    // <your code>
-    return x;}
-
-// -----------
-// plus_digits
-// -----------
-
-/**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
- * @param b2 an iterator to the beginning of an input  sequence (inclusive)
- * @param e2 an iterator to the end       of an input  sequence (exclusive)
- * @param x  an iterator to the beginning of an output sequence (inclusive)
- * @return   an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the sum of the two input sequences into the output sequence
- * ([b1, e1) + [b2, e2)) => x
- */
-template <typename II1, typename II2, typename FI>
-FI plus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
-    
-    
-    
-    return x;
-
-}
-
-// ------------
-// minus_digits
-// ------------
-
-/**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
- * @param b2 an iterator to the beginning of an input  sequence (inclusive)
- * @param e2 an iterator to the end       of an input  sequence (exclusive)
- * @param x  an iterator to the beginning of an output sequence (inclusive)
- * @return   an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the difference of the two input sequences into the output sequence
- * ([b1, e1) - [b2, e2)) => x
- */
-template <typename II1, typename II2, typename FI>
-FI minus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
-    // <your code>
-    return x;}
-
-// -----------------
-// multiplies_digits
-// -----------------
-
-/**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
- * @param b2 an iterator to the beginning of an input  sequence (inclusive)
- * @param e2 an iterator to the end       of an input  sequence (exclusive)
- * @param x  an iterator to the beginning of an output sequence (inclusive)
- * @return   an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the product of the two input sequences into the output sequence
- * ([b1, e1) * [b2, e2)) => x
- */
-template <typename II1, typename II2, typename FI>
-FI multiplies_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
-    // <your code>
-    return x;}
-
-// --------------
-// divides_digits
-// --------------
-
-/**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
- * @param b2 an iterator to the beginning of an input  sequence (inclusive)
- * @param e2 an iterator to the end       of an input  sequence (exclusive)
- * @param x  an iterator to the beginning of an output sequence (inclusive)
- * @return   an iterator to the end       of an output sequence (exclusive)
- * the sequences are of decimal digits
- * output the division of the two input sequences into the output sequence
- * ([b1, e1) / [b2, e2)) => x
- */
-template <typename II1, typename II2, typename FI>
-FI divides_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
-    // <your code>
-    return x;}
 
 // -------
 // Integer
@@ -398,20 +280,25 @@ class Integer {
             typename C::const_iterator rb = rhs._x.begin();
             typename C::iterator le = --lhs._x.end(); // -- to point at the last element
             typename C::const_iterator re = --rhs._x.end();
+            
             while (le >= lb || re >= rb) {
+                
                 sum = 0;
                 if (le >= lb) {
                     sum += *le;
                     --le;
                 }
+                
                 if (re >= rb) {
                     sum += *re;
                     --re;
                 }
+                
                 if (carry) {
                     sum += 1;
                     carry = false;
                 }
+                
                 if (sum > 9) {
                     rev_sum.push_back(sum - 10);
                     carry = true;
@@ -495,8 +382,8 @@ class Integer {
                 rev_diff.pop_back();
             }
             
-            _x.resize(rev_diff.size());
-            reverse_copy(rev_diff.begin(), rev_diff.end(), _x.begin());
+            lhs._x.resize(rev_diff.size());
+            reverse_copy(rev_diff.begin(), rev_diff.end(), lhs._x.begin());
             if (rhs_greater_than_lhs)
                 lhs.positive = false;
             return lhs;
@@ -766,7 +653,7 @@ class Integer {
             } else {// (!positive && !rhs.positive)
                 Integer i(rhs);
                 i.positive = true;
-                return basic_minus_eq(i, -(*this));
+                return *this = basic_minus_eq(i, -(*this));
             }
         }
 
@@ -861,22 +748,26 @@ class Integer {
             if (rhs == 0)
                 throw invalid_argument("Integer::operator/=()");
             
-            if (*this < rhs)
+            Integer i(*this);
+            i.abs();
+            Integer j(rhs);
+            j.abs();
+            
+            if (i < j)
                 return *this = 0;
-            if (*this == rhs)
+            if (i == j)
                 return *this = 1;
             
-            Integer i = *this;
             Integer quotient = 0;
-            while (i >= rhs) {
-                i -= rhs;
+            while (i >= j) {
+                i -= j;
                 ++quotient;
             }
             
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
-                positive = true;
+                quotient.positive = true;
             else
-                positive = false;
+                quotient.positive = false;
             
             return *this = quotient;
         }
@@ -894,21 +785,28 @@ class Integer {
             if (rhs <= 0)
                 throw invalid_argument("Integer::operator/=()");
             
-            if (*this < rhs)
+            Integer i(*this);
+            i.abs();
+            Integer j(rhs);
+            j.abs();
+            
+            if (i < j)
+                return *this;
+            if (i == j)
                 return *this = 0;
-            if (*this == rhs)
-                return *this = 1;
             
             Integer quotient = 0;
-            while (*this >= rhs) {
-                *this -= rhs;
+            while (i >= j) {
+                i -= j;
                 ++quotient;
             }
             
-            if ((positive && rhs.positive) || (!positive && !rhs.positive))
-                positive = true;
+            if (i == 0)
+                i.positive = true;
             else
-                positive = false;
+                i.positive = this->positive;
+                
+            *this = i;
             
             return *this;
         
@@ -924,25 +822,29 @@ class Integer {
         Integer& operator <<= (int n) {
             // <your code>
             Integer i = *this;
+            i.abs();
             vector<bool> bits(n, false);
             
             while (i > 0) {
-                if (Integer(i) %= 2 == 0)
+                if ((Integer(i) %= 2) == 0)
                     bits.push_back(false);
                 else
                     bits.push_back(true);
                 
                 i /= 2;
             }
+            
             unsigned long long j = 0;
-            *this = 0;
+            i = 0;
             for (bool b : bits) {
                 if (b)
-                    *this += Integer(2).pow(j);
+                    i += Integer(2).pow(j);
                 ++j;
             }
             
-            return *this;
+            i.positive = this->positive;
+            
+            return *this = i;
         }
 
         // ------------
@@ -955,10 +857,11 @@ class Integer {
         Integer& operator >>= (int n) {
             // <your code>
             Integer i = *this;
+            i.abs();
             vector<bool> bits;
             
             while (i > 0) {
-                if (Integer(i) %= 2 == 0)
+                if ((Integer(i) %= 2) == 0)
                     bits.push_back(false);
                 else
                     bits.push_back(true);
@@ -973,15 +876,17 @@ class Integer {
             }
             
             unsigned long long j = 0;
-            *this = 0;
-            typename C::iterator b_it;
+            i = 0;
+            vector<bool>::iterator b_it;
             for (b_it = bits.begin() + n; b_it < bits.end(); ++b_it) {
                 if (*b_it)
-                    *this += Integer(2).pow(j);
+                    i += Integer(2).pow(j);
                 ++j;
             }
             
-            return *this;
+            i.positive = this->positive;
+            
+            return *this = i;
         }
 
         // ---
@@ -1012,20 +917,336 @@ class Integer {
          * @throws invalid_argument if ((this == 0) && (e == 0)) or (e < 0)
          */
         Integer& pow (int e) {
-            cout << *this << ".pow("<<e<<")\n";
             // <your code>
             if ((*this == 0 && e == 0) || (e < 0))
                 throw invalid_argument("Integer::pow()");
-            Integer n(*this);
-            for (int i = 1; i < e; ++i) {
-                cout << *this << " *= " << n << "\n";
-                *this *= n;
+            
+            if (e == 0)
+                return *this = 1;
+            
+            /* save state to later determine sign of result */
+            int exp = e;
+            bool pos = this->positive;
+            
+            this->abs();
+            Integer base(*this);
+            *this = 1;
+            
+            while (e > 0) {
+                if (e & 1) {
+                    *this *= base;
+                }
+                e >>= 1;
+                base *= base;
             }
+            
+            if (!pos && (exp % 2 != 0))
+                this->positive = false;
             
             return *this;
         
         }
         
 };
+
+// -----------------
+// shift_left_digits
+// -----------------
+
+/**
+ * @param b an iterator to the beginning of an input  sequence (inclusive)
+ * @param e an iterator to the end       of an input  sequence (exclusive)
+ * @param x an iterator to the beginning of an output sequence (inclusive)
+ * @return  an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the shift left of the input sequence into the output sequence
+ * ([b, e) << n) => x
+ */
+template <typename II, typename FI>
+FI shift_left_digits (II b, II e, int n, FI x) {
+    // <your code>
+    
+    string s;
+    while (b != e) {
+        s += to_string(*b);
+        ++b;
+    }
+    
+    Integer<int> i(s);
+    
+    i <<= n;
+    
+    ostringstream os;
+    os << i;
+    s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+
+    return x;
+}
+
+// ------------------
+// shift_right_digits
+// ------------------
+
+/**
+ * @param b an iterator to the beginning of an input  sequence (inclusive)
+ * @param e an iterator to the end       of an input  sequence (exclusive)
+ * @param x an iterator to the beginning of an output sequence (inclusive)
+ * @return  an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the shift right of the input sequence into the output sequence
+ * ([b, e) >> n) => x
+ */
+template <typename II, typename FI>
+FI shift_right_digits (II b, II e, int n, FI x) {
+    // <your code>
+
+    string s;
+    while (b != e) {
+        s += to_string(*b);
+        ++b;
+    }
+    
+    Integer<int> i(s);
+    
+    i >>= n;
+    
+    ostringstream os;
+    os << i;
+    s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+    
+    return x;
+}
+
+// -----------
+// plus_digits
+// -----------
+
+/**
+ * @param b  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b2 an iterator to the beginning of an input  sequence (inclusive)
+ * @param e2 an iterator to the end       of an input  sequence (exclusive)
+ * @param x  an iterator to the beginning of an output sequence (inclusive)
+ * @return   an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the sum of the two input sequences into the output sequence
+ * ([b1, e1) + [b2, e2)) => x
+ */
+template <typename II1, typename II2, typename FI>
+FI plus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
+    
+    string s1;
+    while (b1 != e1) {
+        s1 += to_string(*b1);
+        ++b1;
+    }
+    
+    Integer<int> i(s1);
+    
+    string s2;
+    while (b2 != e2) {
+        s2 += to_string(*b2);
+        ++b2;
+    }
+    
+    Integer<int> j(s2);
+    
+    i += j;
+    
+    ostringstream os;
+    os << i;
+    string s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+    
+    return x;
+
+}
+
+// ------------
+// minus_digits
+// ------------
+
+/**
+ * @param b  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b2 an iterator to the beginning of an input  sequence (inclusive)
+ * @param e2 an iterator to the end       of an input  sequence (exclusive)
+ * @param x  an iterator to the beginning of an output sequence (inclusive)
+ * @return   an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the difference of the two input sequences into the output sequence
+ * ([b1, e1) - [b2, e2)) => x
+ */
+template <typename II1, typename II2, typename FI>
+FI minus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
+    // <your code>
+    
+    string s1;
+    while (b1 != e1) {
+        s1 += to_string(*b1);
+        ++b1;
+    }
+    
+    Integer<int> i(s1);
+    
+    string s2;
+    while (b2 != e2) {
+        s2 += to_string(*b2);
+        ++b2;
+    }
+    
+    Integer<int> j(s2);
+    
+    i -= j;
+    
+    ostringstream os;
+    os << i;
+    string s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+    
+    return x;
+
+}
+
+// -----------------
+// multiplies_digits
+// -----------------
+
+/**
+ * @param b  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b2 an iterator to the beginning of an input  sequence (inclusive)
+ * @param e2 an iterator to the end       of an input  sequence (exclusive)
+ * @param x  an iterator to the beginning of an output sequence (inclusive)
+ * @return   an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the product of the two input sequences into the output sequence
+ * ([b1, e1) * [b2, e2)) => x
+ */
+template <typename II1, typename II2, typename FI>
+FI multiplies_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
+    // <your code>
+    
+    string s1;
+    while (b1 != e1) {
+        s1 += to_string(*b1);
+        ++b1;
+    }
+    
+    Integer<int> i(s1);
+    
+    string s2;
+    while (b2 != e2) {
+        s2 += to_string(*b2);
+        ++b2;
+    }
+    
+    Integer<int> j(s2);
+    
+    i *= j;
+    
+    ostringstream os;
+    os << i;
+    string s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+    
+    return x;
+}
+
+// --------------
+// divides_digits
+// --------------
+
+/**
+ * @param b  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b2 an iterator to the beginning of an input  sequence (inclusive)
+ * @param e2 an iterator to the end       of an input  sequence (exclusive)
+ * @param x  an iterator to the beginning of an output sequence (inclusive)
+ * @return   an iterator to the end       of an output sequence (exclusive)
+ * the sequences are of decimal digits
+ * output the division of the two input sequences into the output sequence
+ * ([b1, e1) / [b2, e2)) => x
+ */
+template <typename II1, typename II2, typename FI>
+FI divides_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
+    // <your code>
+    
+    string s1;
+    while (b1 != e1) {
+        s1 += to_string(*b1);
+        ++b1;
+    }
+    
+    Integer<int> i(s1);
+    
+    string s2;
+    while (b2 != e2) {
+        s2 += to_string(*b2);
+        ++b2;
+    }
+    
+    Integer<int> j(s2);
+    
+    i /= j;
+    
+    ostringstream os;
+    os << i;
+    string s = os.str();
+    
+    string::iterator sb = s.begin();
+    string::iterator se = s.end();
+    
+    while (sb != se) {
+        *x = (*sb - '0');
+        ++x;
+        ++sb;
+    }
+    
+    return x;
+
+}
 
 #endif // Integer_h
