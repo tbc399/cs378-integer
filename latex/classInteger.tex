@@ -1,0 +1,713 @@
+\hypertarget{classInteger}{\section{Integer$<$ T, C $>$ Class Template Reference}
+\label{classInteger}\index{Integer$<$ T, C $>$@{Integer$<$ T, C $>$}}
+}
+
+
+{\ttfamily \#include $<$Integer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInteger_a1d5315e4ec5b56b8cb3a6991d514f7d6}{Integer} (int value)
+\item 
+\hyperlink{classInteger_afebf72d47413ceedcc30b74c3055b771}{Integer} (const std\-::string \&value)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_ae9d1fb575b55ac2f6352a2d735c4bb75}{operator-\/} () const 
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a3fc47ae07dce44aa72ce9e02b9a3e003}{operator++} ()
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a326d5bd7d72ad858f523bed95ae66150}{operator++} (int)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_ac6227ea2b4a75ff08d537db0d3a26be4}{operator-\/-\/} ()
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_ae5b697679221dbf1fbc942335bb19fb4}{operator-\/-\/} (int)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a0c37e366a26b17cfd73b1b29a1e8b47b}{operator+=} (const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a2bff1e6dc8f6990028783da8bdd89b0d}{operator-\/=} (const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_acf1388dc4ce49c9b7d69b3b6c3a245f7}{operator$\ast$=} (const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_aa13c715bbc68c58c2bd1f1b49a80277e}{operator/=} (const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a5af44fd8bef5e32fa720b1262045f1b7}{operator\%=} (const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a4114e69e0da713f50f9cf946cfc70637}{operator$<$$<$=} (int n)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a0fbada94834715ce6b91c39e5d41d24f}{operator$>$$>$=} (int n)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a28b38b99580e4787e353c6630c3cf063}{abs} ()
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_aae56deca12053a28469749c93c9f7343}{pow} (int e)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classInteger_ace6a3dac75762d6c42b42285a426828c}{valid} () const 
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a4f6a1a192be1823e573f0c9975bfb90e}{basic\-\_\-plus\-\_\-eq} (\hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_abed10960783ba6d7ea6cf483e908c5ad}{basic\-\_\-minus\-\_\-eq} (\hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \& \hyperlink{classInteger_a7bad07a291c7e01a17b7a057afd3b212}{basic\-\_\-multiply} (\hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+C \hyperlink{classInteger_a19f83aa8d5d86634885eb63d15bcdb6d}{\-\_\-x}
+\item 
+bool \hyperlink{classInteger_af0750e482d739e0d2ebb7185c6b22fc2}{positive}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classInteger_a01445511d8a430434af376416063d71d}{operator==} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+bool \hyperlink{classInteger_ad391df8dc93626907e924ff3fd9b1e2d}{operator!=} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+bool \hyperlink{classInteger_a1205f04dd79ca17ef200a09eb894bab4}{operator$<$} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+bool \hyperlink{classInteger_a730ae17a06ce6ea59504868598d061dd}{operator$<$=} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+bool \hyperlink{classInteger_a0007c8d2187897b1e1675677bf432146}{operator$>$} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+bool \hyperlink{classInteger_afad00c6a35103e4597423c97c25c4ae9}{operator$>$=} (const \hyperlink{classInteger}{Integer} \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a8a111f64cebbf58268d9b60f93d5e542}{operator+} (\hyperlink{classInteger}{Integer} lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a42aae7e62188ee2db3daf01b2888a1f2}{operator-\/} (\hyperlink{classInteger}{Integer} lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a48386930c1e622d19df197393f6be01a}{operator$\ast$} (\hyperlink{classInteger}{Integer} lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_aeaafaff40a58b3724192ef0e759788b5}{operator/} (\hyperlink{classInteger}{Integer} lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_aea18c4ff2ec0c30ed29a4010e892d385}{operator\%} (\hyperlink{classInteger}{Integer} lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_aaf32bc4191034ed250a064aa6796ade5}{operator$<$$<$} (\hyperlink{classInteger}{Integer} lhs, int rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a06b0180ba9f20ffd4401155763a03119}{operator$>$$>$} (\hyperlink{classInteger}{Integer} lhs, int rhs)
+\item 
+ostream \& \hyperlink{classInteger_a365f9733a15ad556c4f43eeef5d6d542}{operator$<$$<$} (ostream \&lhs, const \hyperlink{classInteger}{Integer} \&rhs)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_ac872a9e1c5a2e8e1457baf75e439f8da}{abs} (\hyperlink{classInteger}{Integer} x)
+\item 
+\hyperlink{classInteger}{Integer} \hyperlink{classInteger_a952b384ed1bfaf53196af505c20ca8d8}{pow} (\hyperlink{classInteger}{Integer} x, int e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInteger_a1d5315e4ec5b56b8cb3a6991d514f7d6}{\index{Integer@{Integer}!Integer@{Integer}}
+\index{Integer@{Integer}!Integer@{Integer}}
+\subsubsection[{Integer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}$<$ T, C $>$\-::{\bf Integer} (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a1d5315e4ec5b56b8cb3a6991d514f7d6}
+Construct an \hyperlink{classInteger}{Integer} from an int 
+\begin{DoxyParams}{Parameters}
+{\em value} & an int \\
+\hline
+\end{DoxyParams}
+\hypertarget{classInteger_afebf72d47413ceedcc30b74c3055b771}{\index{Integer@{Integer}!Integer@{Integer}}
+\index{Integer@{Integer}!Integer@{Integer}}
+\subsubsection[{Integer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}$<$ T, C $>$\-::{\bf Integer} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classInteger_afebf72d47413ceedcc30b74c3055b771}
+Construct an \hyperlink{classInteger}{Integer} from a string representation 
+\begin{DoxyParams}{Parameters}
+{\em value} & a string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if value is not a valid representation of an \hyperlink{classInteger}{Integer} \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classInteger_a28b38b99580e4787e353c6630c3cf063}{\index{Integer@{Integer}!abs@{abs}}
+\index{abs@{abs}!Integer@{Integer}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::abs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a28b38b99580e4787e353c6630c3cf063}
+Absolute value \begin{DoxyReturn}{Returns}
+the absolute value of this \hyperlink{classInteger}{Integer} returned by reference 
+\end{DoxyReturn}
+\hypertarget{classInteger_abed10960783ba6d7ea6cf483e908c5ad}{\index{Integer@{Integer}!basic\-\_\-minus\-\_\-eq@{basic\-\_\-minus\-\_\-eq}}
+\index{basic\-\_\-minus\-\_\-eq@{basic\-\_\-minus\-\_\-eq}!Integer@{Integer}}
+\subsubsection[{basic\-\_\-minus\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::basic\-\_\-minus\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classInteger_abed10960783ba6d7ea6cf483e908c5ad}
+A helper function to -\/= that implements simple subtraction 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the subtraction \\
+\hline
+{\em rhs} & the right hand side of the subtraction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the difference of lhs and rhs stored in lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a7bad07a291c7e01a17b7a057afd3b212}{\index{Integer@{Integer}!basic\-\_\-multiply@{basic\-\_\-multiply}}
+\index{basic\-\_\-multiply@{basic\-\_\-multiply}!Integer@{Integer}}
+\subsubsection[{basic\-\_\-multiply}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::basic\-\_\-multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classInteger_a7bad07a291c7e01a17b7a057afd3b212}
+A helper function to $\ast$= that implements simple long multiplication 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the multiplication \\
+\hline
+{\em rhs} & the right hand side of the multiplication \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the product of lhs and rhs stored in lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a4f6a1a192be1823e573f0c9975bfb90e}{\index{Integer@{Integer}!basic\-\_\-plus\-\_\-eq@{basic\-\_\-plus\-\_\-eq}}
+\index{basic\-\_\-plus\-\_\-eq@{basic\-\_\-plus\-\_\-eq}!Integer@{Integer}}
+\subsubsection[{basic\-\_\-plus\-\_\-eq}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::basic\-\_\-plus\-\_\-eq (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classInteger_a4f6a1a192be1823e573f0c9975bfb90e}
+A helper function to $\ast$= that implements simple addition 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the sum \\
+\hline
+{\em rhs} & the right hand side of the sum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of lhs and rhs stored in lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a5af44fd8bef5e32fa720b1262045f1b7}{\index{Integer@{Integer}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!Integer@{Integer}}
+\subsubsection[{operator\%=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator\%= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a5af44fd8bef5e32fa720b1262045f1b7}
+Modulo equal 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \hyperlink{classInteger}{Integer} to mod this \hyperlink{classInteger}{Integer} by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the mod of this \hyperlink{classInteger}{Integer} with rhs stored in this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs $<$= 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_acf1388dc4ce49c9b7d69b3b6c3a245f7}{\index{Integer@{Integer}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Integer@{Integer}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_acf1388dc4ce49c9b7d69b3b6c3a245f7}
+Multiply equal 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \hyperlink{classInteger}{Integer} to multiply with this \hyperlink{classInteger}{Integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the product of this \hyperlink{classInteger}{Integer} and rhs stored in this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_a3fc47ae07dce44aa72ce9e02b9a3e003}{\index{Integer@{Integer}!operator++@{operator++}}
+\index{operator++@{operator++}!Integer@{Integer}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a3fc47ae07dce44aa72ce9e02b9a3e003}
+Pre-\/increment \begin{DoxyReturn}{Returns}
+this \hyperlink{classInteger}{Integer} after incrementing by 1 
+\end{DoxyReturn}
+\hypertarget{classInteger_a326d5bd7d72ad858f523bed95ae66150}{\index{Integer@{Integer}!operator++@{operator++}}
+\index{operator++@{operator++}!Integer@{Integer}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} {\bf Integer}$<$ T, C $>$\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a326d5bd7d72ad858f523bed95ae66150}
+Post-\/increment \begin{DoxyReturn}{Returns}
+a copy of this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_a0c37e366a26b17cfd73b1b29a1e8b47b}{\index{Integer@{Integer}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Integer@{Integer}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a0c37e366a26b17cfd73b1b29a1e8b47b}
+Plus equal 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \hyperlink{classInteger}{Integer} to add to this \hyperlink{classInteger}{Integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of this \hyperlink{classInteger}{Integer} and rhs stored in this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_ae9d1fb575b55ac2f6352a2d735c4bb75}{\index{Integer@{Integer}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Integer@{Integer}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} {\bf Integer}$<$ T, C $>$\-::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_ae9d1fb575b55ac2f6352a2d735c4bb75}
+Negation \begin{DoxyReturn}{Returns}
+the negation of this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_ac6227ea2b4a75ff08d537db0d3a26be4}{\index{Integer@{Integer}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Integer@{Integer}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_ac6227ea2b4a75ff08d537db0d3a26be4}
+Pre-\/decrement \begin{DoxyReturn}{Returns}
+this \hyperlink{classInteger}{Integer} after decrementing by 1 
+\end{DoxyReturn}
+\hypertarget{classInteger_ae5b697679221dbf1fbc942335bb19fb4}{\index{Integer@{Integer}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Integer@{Integer}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} {\bf Integer}$<$ T, C $>$\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_ae5b697679221dbf1fbc942335bb19fb4}
+Post-\/decrement \begin{DoxyReturn}{Returns}
+a copy of this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_a2bff1e6dc8f6990028783da8bdd89b0d}{\index{Integer@{Integer}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Integer@{Integer}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a2bff1e6dc8f6990028783da8bdd89b0d}
+Minus equal 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \hyperlink{classInteger}{Integer} to subtract from this \hyperlink{classInteger}{Integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the difference of this \hyperlink{classInteger}{Integer} and rhs stored in this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+\hypertarget{classInteger_aa13c715bbc68c58c2bd1f1b49a80277e}{\index{Integer@{Integer}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Integer@{Integer}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_aa13c715bbc68c58c2bd1f1b49a80277e}
+Divide equal 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the divisor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the quotient stored in this \hyperlink{classInteger}{Integer} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs == 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_a4114e69e0da713f50f9cf946cfc70637}{\index{Integer@{Integer}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!Integer@{Integer}}
+\subsubsection[{operator$<$$<$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator$<$$<$= (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a4114e69e0da713f50f9cf946cfc70637}
+Left-\/shift equal 
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of bits to shift this \hyperlink{classInteger}{Integer} to the left by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this \hyperlink{classInteger}{Integer} shifted left by n bits 
+\end{DoxyReturn}
+\hypertarget{classInteger_a0fbada94834715ce6b91c39e5d41d24f}{\index{Integer@{Integer}!operator$>$$>$=@{operator$>$$>$=}}
+\index{operator$>$$>$=@{operator$>$$>$=}!Integer@{Integer}}
+\subsubsection[{operator$>$$>$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::operator$>$$>$= (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_a0fbada94834715ce6b91c39e5d41d24f}
+Right-\/shift equal 
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of bits to shift this \hyperlink{classInteger}{Integer} to the right by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this \hyperlink{classInteger}{Integer} shifted right by n bits 
+\end{DoxyReturn}
+\hypertarget{classInteger_aae56deca12053a28469749c93c9f7343}{\index{Integer@{Integer}!pow@{pow}}
+\index{pow@{pow}!Integer@{Integer}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer}\& {\bf Integer}$<$ T, C $>$\-::pow (
+\begin{DoxyParamCaption}
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classInteger_aae56deca12053a28469749c93c9f7343}
+Power 
+\begin{DoxyParams}{Parameters}
+{\em e} & an int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this \hyperlink{classInteger}{Integer} raised to the e power 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if ((this == 0) \&\& (e == 0)) or (e $<$ 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_ace6a3dac75762d6c42b42285a426828c}{\index{Integer@{Integer}!valid@{valid}}
+\index{valid@{valid}!Integer@{Integer}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool {\bf Integer}$<$ T, C $>$\-::valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classInteger_ace6a3dac75762d6c42b42285a426828c}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classInteger_ac872a9e1c5a2e8e1457baf75e439f8da}{\index{Integer@{Integer}!abs@{abs}}
+\index{abs@{abs}!Integer@{Integer}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} abs (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_ac872a9e1c5a2e8e1457baf75e439f8da}
+Absolute value 
+\begin{DoxyParams}{Parameters}
+{\em x} & an \hyperlink{classInteger}{Integer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the absolute value of the \hyperlink{classInteger}{Integer} x 
+\end{DoxyReturn}
+\hypertarget{classInteger_ad391df8dc93626907e924ff3fd9b1e2d}{\index{Integer@{Integer}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!Integer@{Integer}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_ad391df8dc93626907e924ff3fd9b1e2d}
+Check to see if two Integers are not equal 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Integers are N\-O\-T the same 
+\end{DoxyReturn}
+\hypertarget{classInteger_aea18c4ff2ec0c30ed29a4010e892d385}{\index{Integer@{Integer}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!Integer@{Integer}}
+\subsubsection[{operator\%}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator\% (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_aea18c4ff2ec0c30ed29a4010e892d385}
+Performs the modulus operation on two Integers 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the operation \\
+\hline
+{\em rhs} & the right hand side of the operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing the result of lhs modulo rhs which is effectively the remainder of lhs / rhs 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs $<$= 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_a48386930c1e622d19df197393f6be01a}{\index{Integer@{Integer}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Integer@{Integer}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a48386930c1e622d19df197393f6be01a}
+Multiplies an \hyperlink{classInteger}{Integer} by another \hyperlink{classInteger}{Integer} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the multiplication \\
+\hline
+{\em rhs} & the right hand side of the multiplication \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing the product of lhs and rhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a8a111f64cebbf58268d9b60f93d5e542}{\index{Integer@{Integer}!operator+@{operator+}}
+\index{operator+@{operator+}!Integer@{Integer}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a8a111f64cebbf58268d9b60f93d5e542}
+Adds two Integers together 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the addition \\
+\hline
+{\em rhs} & the right had side of the addition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing the sum of lhs and rhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a42aae7e62188ee2db3daf01b2888a1f2}{\index{Integer@{Integer}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Integer@{Integer}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a42aae7e62188ee2db3daf01b2888a1f2}
+Subtracts an \hyperlink{classInteger}{Integer} from another \hyperlink{classInteger}{Integer} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the subtraction \\
+\hline
+{\em rhs} & the right hand side of the subtraction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing the difference of lhs and rhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_aeaafaff40a58b3724192ef0e759788b5}{\index{Integer@{Integer}!operator/@{operator/}}
+\index{operator/@{operator/}!Integer@{Integer}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_aeaafaff40a58b3724192ef0e759788b5}
+Divides an \hyperlink{classInteger}{Integer} by another \hyperlink{classInteger}{Integer} 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the dividend \\
+\hline
+{\em rhs} & the divisor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing the quotient of lhs / rhs 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs == 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_a1205f04dd79ca17ef200a09eb894bab4}{\index{Integer@{Integer}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Integer@{Integer}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a1205f04dd79ca17ef200a09eb894bab4}
+Check to see if one \hyperlink{classInteger}{Integer} is less than another 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs is less than rhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_aaf32bc4191034ed250a064aa6796ade5}{\index{Integer@{Integer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Integer@{Integer}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_aaf32bc4191034ed250a064aa6796ade5}
+Shift an \hyperlink{classInteger}{Integer} to the left 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the \hyperlink{classInteger}{Integer} to be shifted \\
+\hline
+{\em rhs} & the number of bits to left shift lhs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing lhs shifted left by rhs bits 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs $<$ 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_a365f9733a15ad556c4f43eeef5d6d542}{\index{Integer@{Integer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Integer@{Integer}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a365f9733a15ad556c4f43eeef5d6d542}
+Write out an \hyperlink{classInteger}{Integer} to an ostream object 
+\begin{DoxyParams}{Parameters}
+{\em lsh} & the ostream to write out to \\
+\hline
+{\em rhs} & the \hyperlink{classInteger}{Integer} to write out \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ostream object pasted in through lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a730ae17a06ce6ea59504868598d061dd}{\index{Integer@{Integer}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Integer@{Integer}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a730ae17a06ce6ea59504868598d061dd}
+Check to see if one \hyperlink{classInteger}{Integer} is less than or equal to another 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs is less than O\-R is equal to rhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a01445511d8a430434af376416063d71d}{\index{Integer@{Integer}!operator==@{operator==}}
+\index{operator==@{operator==}!Integer@{Integer}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a01445511d8a430434af376416063d71d}
+Check to see if two Integers have the same sign and content 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Integers are the same 
+\end{DoxyReturn}
+\hypertarget{classInteger_a0007c8d2187897b1e1675677bf432146}{\index{Integer@{Integer}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Integer@{Integer}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a0007c8d2187897b1e1675677bf432146}
+Check to see if one \hyperlink{classInteger}{Integer} is greater than another 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if rhs is greater than lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_afad00c6a35103e4597423c97c25c4ae9}{\index{Integer@{Integer}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Integer@{Integer}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{lhs, }
+\item[{const {\bf Integer}$<$ T, C $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_afad00c6a35103e4597423c97c25c4ae9}
+Check to see if one \hyperlink{classInteger}{Integer} is greater than or equal to another 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the left hand side of the predicate \\
+\hline
+{\em rhs} & the right hand side of the predicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if rhs is greater than O\-R is equal to lhs 
+\end{DoxyReturn}
+\hypertarget{classInteger_a06b0180ba9f20ffd4401155763a03119}{\index{Integer@{Integer}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Integer@{Integer}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a06b0180ba9f20ffd4401155763a03119}
+Shift an \hyperlink{classInteger}{Integer} to the right 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the \hyperlink{classInteger}{Integer} to be shifted \\
+\hline
+{\em rhs} & the number of bits to right shift lhs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing lhs shifted right by rhs bits 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if (rhs $<$ 0) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classInteger_a952b384ed1bfaf53196af505c20ca8d8}{\index{Integer@{Integer}!pow@{pow}}
+\index{pow@{pow}!Integer@{Integer}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ {\bf Integer} pow (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer}$<$ T, C $>$}]{x, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classInteger_a952b384ed1bfaf53196af505c20ca8d8}
+Power 
+\begin{DoxyParams}{Parameters}
+{\em x} & an \hyperlink{classInteger}{Integer} \\
+\hline
+{\em e} & an int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \hyperlink{classInteger}{Integer} representing x raised to e 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & if ((x == 0) \&\& (e == 0)) $\vert$$\vert$ (e $<$ 0) \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classInteger_a19f83aa8d5d86634885eb63d15bcdb6d}{\index{Integer@{Integer}!\-\_\-x@{\-\_\-x}}
+\index{\-\_\-x@{\-\_\-x}!Integer@{Integer}}
+\subsubsection[{\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ C {\bf Integer}$<$ T, C $>$\-::\-\_\-x\hspace{0.3cm}{\ttfamily [private]}}}\label{classInteger_a19f83aa8d5d86634885eb63d15bcdb6d}
+\hypertarget{classInteger_af0750e482d739e0d2ebb7185c6b22fc2}{\index{Integer@{Integer}!positive@{positive}}
+\index{positive@{positive}!Integer@{Integer}}
+\subsubsection[{positive}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename C = vector$<$\-T$>$$>$ bool {\bf Integer}$<$ T, C $>$\-::positive\hspace{0.3cm}{\ttfamily [private]}}}\label{classInteger_af0750e482d739e0d2ebb7185c6b22fc2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Integer_8h}{Integer.\-h}\end{DoxyCompactItemize}

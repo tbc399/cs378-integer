@@ -1,0 +1,1718 @@
+\hypertarget{TestInteger_8c_09_09}{\section{Test\-Integer.\-c++ File Reference}
+\label{TestInteger_8c_09_09}\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$deque$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Integer.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ int $>$\-::iterator \hyperlink{TestInteger_8c_09_09_a7f7776c3795227593917f3caa8489aba}{V\-I}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TestInteger_8c_09_09_a675039150248bf0c32e91943652eec94}{T\-E\-S\-T} (Integer\-Fixture, construct\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab7b0e23511a3a5075c5fec431d014f40}{T\-E\-S\-T} (Integer\-Fixture, construct\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_afff7d1576c3f9ef137e9a6961ebf690d}{T\-E\-S\-T} (Integer\-Fixture, construct\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae066e15674b0c4df3b5b42fcb8f58d06}{T\-E\-S\-T} (Integer\-Fixture, e\-\_\-construct\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_af58d400c030da2027f3db5bfa4d8b690}{T\-E\-S\-T} (Integer\-Fixture, e\-\_\-construct\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9ced8436f7a4feeb5305e47b8846e186}{T\-E\-S\-T} (Integer\-Fixture, e\-\_\-construct\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a87298984a3026a3e01b931e605af6921}{T\-E\-S\-T} (Integer\-Fixture, negation\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae71d8b5fd38aaca8f6cbab68089c9ad4}{T\-E\-S\-T} (Integer\-Fixture, negation\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_af175625da1bd939494ca4fd02e788bc1}{T\-E\-S\-T} (Integer\-Fixture, negation\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_abffd71d8b52674efbea0542fb2609aac}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a257a9fdd10d78ae76c4de23bf0317448}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_af66a29ded80d8bd674a74f2061b1d002}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae10dc76d9cc23713b8a665ee42ff9032}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7eea5e03c81d3a0324dd5d3e1efdbc93}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a616b70f2803f734821c5581d153579f0}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-equal\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0780a4c4707bd1275ef2bc7c876fe6bd}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a38c0448a4f61256adff0d0c754e42a24}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a6c1b0d272ff4239a87c4460f3d2489c0}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7ce8918ede377bfddb61c0a6e94b0d52}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a6e70b12e6b6c6eada50f762916c5be58}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a09f8698a4723d79ae74616695152235f}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0a2e323ecb11808bc1fde12e41e7004e}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5a2645cb3443ff13c1bb66b645f6df2d}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae9601b31869a2b960c1c67d778d50ed2}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-equal\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_af1bc9d147c5aa39c46ffa73f2cdcd04c}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-inc\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9af7257e1657d70b4e02569fca91ef2d}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-inc\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a188a220b2cd9239ef27d3274af69268c}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-inc\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9ad80ad58724f9cbff1b777336513d5e}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-inc\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_aef0dfdec9487fbf01c040aaa4e4bbd5b}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-inc\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_aff9e0e59216934e893fdbbf8cd158ba3}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-inc\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a18123399522373c6e417a91125a91d2d}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-inc\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7a71a2268849866ccfaf01ce27a45dcd}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-dec\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae2e5f795cb426e11f775d8f3e0b5e51f}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-dec\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a77ca1f9c65877ab3183adfce1895bbf3}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-dec\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a1774ee173e3896c82a9520195a621192}{T\-E\-S\-T} (Integer\-Fixture, pre\-\_\-dec\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a1d4894243b7b696916782c76a76c55b1}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-dec\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8f1fd5d8e2ed01134f37a530ffc52691}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-dec\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a764bca130609040b4e524f964d86b2db}{T\-E\-S\-T} (Integer\-Fixture, post\-\_\-dec\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ad254190417cbd6d245454a16f626bbbd}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a3f0fa2a297766b42c81e29319083ee06}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a406d5e24880b95b0a3b5b5d1d2583847}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a080b8f5ed886123f7bf2271774b74358}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a415d0b02ca47297b52da0e42ef66a406}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a32c9749699b06125f30657edbcc75e7a}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a37e767335517132852737542f5004656}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_a07091c692ea9552db3678636492f72f4}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_a18ea07e9c4bd1dea7eba2241c15c9e8f}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_a89fd93c40e3fb7d5df2a18d0fc115fb9}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-eq\-\_\-10)
+\item 
+\hyperlink{TestInteger_8c_09_09_aa84e342419dd3b51f50a30b9c8b4f943}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a88d44d1e4fd05ad2f2069842dfce473c}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0854e3ab5676d6e71b2e453e6ceb531c}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae3f6134489a77320d26c416a0e849d17}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_afcb4231755a713d10e2b6247c3c28142}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a1fe0f933907d750a828d469cbfb0deb9}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8889b9852f7173c5bd5ec9b3c439572a}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_acad0a0dec52da4596ac37946a05fde94}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_aa38d4709eb5d7e4a0ce17eda1fa9eefc}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab8956531d8b8db32543365ed6130a346}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-eq\-\_\-10)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2d0d450c3bd57d8dbca9f8b966f67f23}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a065d36a238f73dc5d4817c43f1a36faa}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2b247cc4cdba949c5ec29de237420298}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a4a8d1cad78f383e97a565a9f8949c5e8}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a36f119c3db3758568817ec108eb63065}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a26547e29d40993af6eb8ea4ff5706979}{T\-E\-S\-T} (Integer\-Fixture, mod\-\_\-eq\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac740b7b7c722a8335d3faa5beff027ed}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-left\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5b92261d9dfec163099bcb992d010f1c}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-left\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae9ed3e47eb2ded00700aabcf2ccf9d6a}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-left\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a3196445ee2db0cea5c55857ec9095d7e}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-left\-\_\-eq\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab91e3f9b510a037011043aa9f86a918d}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-right\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a49aa379b2f6783dd847af3791ffd7a7c}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-right\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_aa880de9340ed39214db5ddca6742ae3c}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-right\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9de0a04069cdba0d3b0f7390791eae81}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-right\-\_\-eq\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a67c6be927a65f050a850d57b8c62ba4e}{T\-E\-S\-T} (Integer\-Fixture, abs\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a4a84e53aaa6ac60ae0c975f07a3d6d6d}{T\-E\-S\-T} (Integer\-Fixture, abs\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9ff96d62c1540bd68cfa98cf5e6f1c44}{T\-E\-S\-T} (Integer\-Fixture, abs\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac202bf13a21c16463a79d16f3151009b}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_afd294dcefff9809ee26b3f1fb1624a54}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0950d70a3cb56b8119f1f06bbe47adc8}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5480a05817d3837abf600a4c0d3859a6}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a76eb8a7424eceb31fc9f9aff25bfcc5b}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a11de2836e19f8d16cbf45eda24a25e2e}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5faed6e075e626d924a5038010e24ed1}{T\-E\-S\-T} (Integer\-Fixture, pow\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_a3030d897766f58ca575f5aa8be6e7ff3}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-equals\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5f2176aa8f9be74c7ec71bb1fc1a7b5a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-equals\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a212bf77a1bb45dbfc2dee9d0902c6ab0}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-equals\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_abde0188fadc7e8b7bda767c42de77500}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-equals\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a17d2c4b9aecb504b5ad648902bbbff9f}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-not\-\_\-equals\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7223fe1424f2838d9de6e2d8e09e52bf}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-not\-\_\-equals\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a99788ee595f09f53f623a74234204bfd}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-not\-\_\-equals\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a844d0e36f0242e44fed4bc2a0d7593ec}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-not\-\_\-equals\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8bef4df25d3edab3ce563c909519073a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a1b22f5f2fd068303f9478e073e0da5b0}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac98c8fc00d9541ab1058a48c339e9e1b}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac8421d10450d41bd63000cc3563cce71}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a79c68d5c1653e1b34b28bafe98aecc83}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab12dc2f9b4ae1491239e8a9c5b667b17}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-less\-\_\-than\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a73dc0d3bdf8ce7956856268859fdb308}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac8587dbe8467a3d75704698bd96a3940}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a836a9bfba639688878367430a051c41e}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8aa2e39077146443fc054fdb59822036}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2c39aeca0277a460d12a4fbf09327383}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_af996ff313ae5b166cffa12dd7debd4dc}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a281452f2544b37cd908581100e1f68ce}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0467c5cee94a7c32ed33fd853c93b3a6}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac4164f23db3cae226f195eae093967f8}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8bea23c00c0cf61062ca8b63698ff5ef}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a25938edcc0ca0460b515127e81f768bf}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_acafa97a36654c0387c39a3c15bae62e2}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-plus\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2a8082b4e62fadc92a2e53daa9ceb715}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9f485a8088dedcfce34a614822126d11}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a909dd5ab8bf98a4e34def825805a1f6d}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_aa5762bbe95c731305507c07e3b180794}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2c4a605ee659922c0f828d85191e2727}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a3b44adfcc236126180bd6734f0e0286a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac0aacd4e05c03b6a6c3d995a216f63e5}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_afec838c3ccfddb558ef126d8631a3f25}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9cd6b1d672643cef18fd7f4a0dd8c9e5}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-minus\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_a23f9b2ec0bbeca6106f90b2c422c71be}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_afbf936f5f57404921fd1c3c384628ab4}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a921044d19761fe313a6bd4607b8485d1}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_ad0da936adb53c0589eb5198b8f26b322}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_a299cac4c53289cfb82c63694fccbfb1f}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab177c9c8c4b05225c41cabae2024e2f4}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_a49afd0fa971700362e9bd2ec6a3b81ac}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_a81774525491ff8a76fa0f0299787303a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_a4286276c9dc9c6908a7783d1ab8fb67f}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-multiply\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_a81da8f394ef78dd20bd9f76746d17858}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a52406787b21c9201f1d72223895386ae}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a9e847df31f5de88b6766d7550a916e1a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5379c16d66de9a99f31148b022fd5e2a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_aafaf249532835d59c375635d925b43ab}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a02df82b4884a5be95a48c6fa553d72a0}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_acf45a7a9d694d24c985b0353801d8a61}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-7)
+\item 
+\hyperlink{TestInteger_8c_09_09_ad9887f6d24d65196b8d5f6777060ad37}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-8)
+\item 
+\hyperlink{TestInteger_8c_09_09_a5b0559eb343740553c6f9a17d9884b84}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-9)
+\item 
+\hyperlink{TestInteger_8c_09_09_a0ca6f67e52ffadc981b5320ab944bc3e}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-divide\-\_\-10)
+\item 
+\hyperlink{TestInteger_8c_09_09_ad1c18471fe759f4b650ac03788d95b21}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ada3ec8b05801545e392c2d436ffca830}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab07059c9569d6a6d07cbf2445e51bbc5}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_afc8a179775a7711fb0248c1ed0642c7b}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_aad30bd573a51d22f6dc0f82a0bb51f75}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a2f081f72e14ad18da7c454474170317f}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-mod\-\_\-6)
+\item 
+\hyperlink{TestInteger_8c_09_09_aa052cd6237ecf6964967964627528bd0}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-left\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a367f89a2b04f6330cb926ce8158e7012}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-left\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8d8e79d0117bd953579c92dc4575e062}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-left\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a1be4ee5c96dd6244f4d213d69583e846}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-left\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_ae35f463426567b32b2d638d7bd48f598}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-right\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a85bdb1e53706fabdbd4f677958b352ee}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-right\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_aaf48367e377dd846e9f40d7aa61f4f02}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-right\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a902d7908363cdab999bcb962fb466dbc}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-shift\-\_\-right\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac978f2e9212e14974ab225fc44630050}{T\-E\-S\-T} (Integer\-Fixture, ostream\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a428babe6d9f982de9b44007179a973c7}{T\-E\-S\-T} (Integer\-Fixture, ostream\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab4569a08d3ad92ce7381311c557a513f}{T\-E\-S\-T} (Integer\-Fixture, ostream\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a8156355c6d2c1293d20fdfebbcbd9c75}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-abs\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a538cf11f9c670fe61c6e4fa2d0f20d93}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-abs\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_ab84c8e5de8347615c4489eb3f726e291}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-abs\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a6959b6312987905f66f14d3964750f46}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-pow\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7781293effc559ae75c90b531c18838d}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-pow\-\_\-2)
+\item 
+\hyperlink{TestInteger_8c_09_09_a96f53268237ae6caecf82dee008ba62c}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-pow\-\_\-3)
+\item 
+\hyperlink{TestInteger_8c_09_09_a3e329bc3fd8a6f86438a23ad2d4c092a}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-pow\-\_\-4)
+\item 
+\hyperlink{TestInteger_8c_09_09_acf8b60c2332ff6dd73673c354a5abab5}{T\-E\-S\-T} (Integer\-Fixture, f\-\_\-pow\-\_\-5)
+\item 
+\hyperlink{TestInteger_8c_09_09_a013a297a1b08b30e0dcb746952764a2a}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-left\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a95b8f68e2988a37232494c60c0e8ca15}{T\-E\-S\-T} (Integer\-Fixture, shift\-\_\-right\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_ac1865dc8ee59efbe927076dfb952b572}{T\-E\-S\-T} (Integer\-Fixture, plus\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a7882d37506c29f367c57c480f6d32321}{T\-E\-S\-T} (Integer\-Fixture, minus\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_aaa1c0cd66ee99d32993014c9156a7dab}{T\-E\-S\-T} (Integer\-Fixture, multiply\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_afd58fc7cb24809a388b3af1b70eb9f94}{T\-E\-S\-T} (Integer\-Fixture, divide\-\_\-digits\-\_\-1)
+\item 
+\hyperlink{TestInteger_8c_09_09_a15a34a8ba62851147163edcf3922f3e6}{T\-E\-S\-T} (Integer\-Fixture, mersenne\-\_\-20\-\_\-vector\-\_\-timing)
+\item 
+\hyperlink{TestInteger_8c_09_09_a943732aad5273df87a4822f32c9b9471}{T\-E\-S\-T} (Integer\-Fixture, mersenne\-\_\-20\-\_\-deque\-\_\-timing)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{TestInteger_8c_09_09_a7f7776c3795227593917f3caa8489aba}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!V\-I@{V\-I}}
+\index{V\-I@{V\-I}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{V\-I}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<$int$>$\-::iterator {\bf V\-I}}}\label{TestInteger_8c_09_09_a7f7776c3795227593917f3caa8489aba}
+
+
+\subsection{Function Documentation}
+\hypertarget{TestInteger_8c_09_09_a675039150248bf0c32e91943652eec94}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{construct\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a675039150248bf0c32e91943652eec94}
+\hypertarget{TestInteger_8c_09_09_ab7b0e23511a3a5075c5fec431d014f40}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{construct\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab7b0e23511a3a5075c5fec431d014f40}
+\hypertarget{TestInteger_8c_09_09_afff7d1576c3f9ef137e9a6961ebf690d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{construct\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afff7d1576c3f9ef137e9a6961ebf690d}
+\hypertarget{TestInteger_8c_09_09_ae066e15674b0c4df3b5b42fcb8f58d06}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{e\-\_\-construct\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae066e15674b0c4df3b5b42fcb8f58d06}
+\hypertarget{TestInteger_8c_09_09_af58d400c030da2027f3db5bfa4d8b690}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{e\-\_\-construct\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_af58d400c030da2027f3db5bfa4d8b690}
+\hypertarget{TestInteger_8c_09_09_a9ced8436f7a4feeb5305e47b8846e186}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{e\-\_\-construct\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9ced8436f7a4feeb5305e47b8846e186}
+\hypertarget{TestInteger_8c_09_09_a87298984a3026a3e01b931e605af6921}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{negation\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a87298984a3026a3e01b931e605af6921}
+\hypertarget{TestInteger_8c_09_09_ae71d8b5fd38aaca8f6cbab68089c9ad4}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{negation\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae71d8b5fd38aaca8f6cbab68089c9ad4}
+\hypertarget{TestInteger_8c_09_09_af175625da1bd939494ca4fd02e788bc1}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{negation\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_af175625da1bd939494ca4fd02e788bc1}
+\hypertarget{TestInteger_8c_09_09_abffd71d8b52674efbea0542fb2609aac}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_abffd71d8b52674efbea0542fb2609aac}
+\hypertarget{TestInteger_8c_09_09_a257a9fdd10d78ae76c4de23bf0317448}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a257a9fdd10d78ae76c4de23bf0317448}
+\hypertarget{TestInteger_8c_09_09_af66a29ded80d8bd674a74f2061b1d002}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_af66a29ded80d8bd674a74f2061b1d002}
+\hypertarget{TestInteger_8c_09_09_ae10dc76d9cc23713b8a665ee42ff9032}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae10dc76d9cc23713b8a665ee42ff9032}
+\hypertarget{TestInteger_8c_09_09_a7eea5e03c81d3a0324dd5d3e1efdbc93}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7eea5e03c81d3a0324dd5d3e1efdbc93}
+\hypertarget{TestInteger_8c_09_09_a616b70f2803f734821c5581d153579f0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-equal\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a616b70f2803f734821c5581d153579f0}
+\hypertarget{TestInteger_8c_09_09_a0780a4c4707bd1275ef2bc7c876fe6bd}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0780a4c4707bd1275ef2bc7c876fe6bd}
+\hypertarget{TestInteger_8c_09_09_a38c0448a4f61256adff0d0c754e42a24}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a38c0448a4f61256adff0d0c754e42a24}
+\hypertarget{TestInteger_8c_09_09_a6c1b0d272ff4239a87c4460f3d2489c0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a6c1b0d272ff4239a87c4460f3d2489c0}
+\hypertarget{TestInteger_8c_09_09_a7ce8918ede377bfddb61c0a6e94b0d52}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7ce8918ede377bfddb61c0a6e94b0d52}
+\hypertarget{TestInteger_8c_09_09_a6e70b12e6b6c6eada50f762916c5be58}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a6e70b12e6b6c6eada50f762916c5be58}
+\hypertarget{TestInteger_8c_09_09_a09f8698a4723d79ae74616695152235f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a09f8698a4723d79ae74616695152235f}
+\hypertarget{TestInteger_8c_09_09_a0a2e323ecb11808bc1fde12e41e7004e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0a2e323ecb11808bc1fde12e41e7004e}
+\hypertarget{TestInteger_8c_09_09_a5a2645cb3443ff13c1bb66b645f6df2d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5a2645cb3443ff13c1bb66b645f6df2d}
+\hypertarget{TestInteger_8c_09_09_ae9601b31869a2b960c1c67d778d50ed2}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-equal\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae9601b31869a2b960c1c67d778d50ed2}
+\hypertarget{TestInteger_8c_09_09_af1bc9d147c5aa39c46ffa73f2cdcd04c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-inc\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_af1bc9d147c5aa39c46ffa73f2cdcd04c}
+\hypertarget{TestInteger_8c_09_09_a9af7257e1657d70b4e02569fca91ef2d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-inc\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9af7257e1657d70b4e02569fca91ef2d}
+\hypertarget{TestInteger_8c_09_09_a188a220b2cd9239ef27d3274af69268c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-inc\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a188a220b2cd9239ef27d3274af69268c}
+\hypertarget{TestInteger_8c_09_09_a9ad80ad58724f9cbff1b777336513d5e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-inc\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9ad80ad58724f9cbff1b777336513d5e}
+\hypertarget{TestInteger_8c_09_09_aef0dfdec9487fbf01c040aaa4e4bbd5b}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-inc\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aef0dfdec9487fbf01c040aaa4e4bbd5b}
+\hypertarget{TestInteger_8c_09_09_aff9e0e59216934e893fdbbf8cd158ba3}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-inc\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aff9e0e59216934e893fdbbf8cd158ba3}
+\hypertarget{TestInteger_8c_09_09_a18123399522373c6e417a91125a91d2d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-inc\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a18123399522373c6e417a91125a91d2d}
+\hypertarget{TestInteger_8c_09_09_a7a71a2268849866ccfaf01ce27a45dcd}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-dec\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7a71a2268849866ccfaf01ce27a45dcd}
+\hypertarget{TestInteger_8c_09_09_ae2e5f795cb426e11f775d8f3e0b5e51f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-dec\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae2e5f795cb426e11f775d8f3e0b5e51f}
+\hypertarget{TestInteger_8c_09_09_a77ca1f9c65877ab3183adfce1895bbf3}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-dec\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a77ca1f9c65877ab3183adfce1895bbf3}
+\hypertarget{TestInteger_8c_09_09_a1774ee173e3896c82a9520195a621192}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pre\-\_\-dec\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a1774ee173e3896c82a9520195a621192}
+\hypertarget{TestInteger_8c_09_09_a1d4894243b7b696916782c76a76c55b1}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-dec\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a1d4894243b7b696916782c76a76c55b1}
+\hypertarget{TestInteger_8c_09_09_a8f1fd5d8e2ed01134f37a530ffc52691}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-dec\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8f1fd5d8e2ed01134f37a530ffc52691}
+\hypertarget{TestInteger_8c_09_09_a764bca130609040b4e524f964d86b2db}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{post\-\_\-dec\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a764bca130609040b4e524f964d86b2db}
+\hypertarget{TestInteger_8c_09_09_ad254190417cbd6d245454a16f626bbbd}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ad254190417cbd6d245454a16f626bbbd}
+\hypertarget{TestInteger_8c_09_09_a3f0fa2a297766b42c81e29319083ee06}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a3f0fa2a297766b42c81e29319083ee06}
+\hypertarget{TestInteger_8c_09_09_a406d5e24880b95b0a3b5b5d1d2583847}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a406d5e24880b95b0a3b5b5d1d2583847}
+\hypertarget{TestInteger_8c_09_09_a080b8f5ed886123f7bf2271774b74358}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a080b8f5ed886123f7bf2271774b74358}
+\hypertarget{TestInteger_8c_09_09_a415d0b02ca47297b52da0e42ef66a406}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a415d0b02ca47297b52da0e42ef66a406}
+\hypertarget{TestInteger_8c_09_09_a32c9749699b06125f30657edbcc75e7a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a32c9749699b06125f30657edbcc75e7a}
+\hypertarget{TestInteger_8c_09_09_a37e767335517132852737542f5004656}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a37e767335517132852737542f5004656}
+\hypertarget{TestInteger_8c_09_09_a07091c692ea9552db3678636492f72f4}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a07091c692ea9552db3678636492f72f4}
+\hypertarget{TestInteger_8c_09_09_a18ea07e9c4bd1dea7eba2241c15c9e8f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a18ea07e9c4bd1dea7eba2241c15c9e8f}
+\hypertarget{TestInteger_8c_09_09_a89fd93c40e3fb7d5df2a18d0fc115fb9}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-eq\-\_\-10}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a89fd93c40e3fb7d5df2a18d0fc115fb9}
+\hypertarget{TestInteger_8c_09_09_aa84e342419dd3b51f50a30b9c8b4f943}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aa84e342419dd3b51f50a30b9c8b4f943}
+\hypertarget{TestInteger_8c_09_09_a88d44d1e4fd05ad2f2069842dfce473c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a88d44d1e4fd05ad2f2069842dfce473c}
+\hypertarget{TestInteger_8c_09_09_a0854e3ab5676d6e71b2e453e6ceb531c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0854e3ab5676d6e71b2e453e6ceb531c}
+\hypertarget{TestInteger_8c_09_09_ae3f6134489a77320d26c416a0e849d17}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae3f6134489a77320d26c416a0e849d17}
+\hypertarget{TestInteger_8c_09_09_afcb4231755a713d10e2b6247c3c28142}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afcb4231755a713d10e2b6247c3c28142}
+\hypertarget{TestInteger_8c_09_09_a1fe0f933907d750a828d469cbfb0deb9}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a1fe0f933907d750a828d469cbfb0deb9}
+\hypertarget{TestInteger_8c_09_09_a8889b9852f7173c5bd5ec9b3c439572a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8889b9852f7173c5bd5ec9b3c439572a}
+\hypertarget{TestInteger_8c_09_09_acad0a0dec52da4596ac37946a05fde94}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_acad0a0dec52da4596ac37946a05fde94}
+\hypertarget{TestInteger_8c_09_09_aa38d4709eb5d7e4a0ce17eda1fa9eefc}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aa38d4709eb5d7e4a0ce17eda1fa9eefc}
+\hypertarget{TestInteger_8c_09_09_ab8956531d8b8db32543365ed6130a346}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-eq\-\_\-10}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab8956531d8b8db32543365ed6130a346}
+\hypertarget{TestInteger_8c_09_09_a2d0d450c3bd57d8dbca9f8b966f67f23}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2d0d450c3bd57d8dbca9f8b966f67f23}
+\hypertarget{TestInteger_8c_09_09_a065d36a238f73dc5d4817c43f1a36faa}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a065d36a238f73dc5d4817c43f1a36faa}
+\hypertarget{TestInteger_8c_09_09_a2b247cc4cdba949c5ec29de237420298}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2b247cc4cdba949c5ec29de237420298}
+\hypertarget{TestInteger_8c_09_09_a4a8d1cad78f383e97a565a9f8949c5e8}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a4a8d1cad78f383e97a565a9f8949c5e8}
+\hypertarget{TestInteger_8c_09_09_a36f119c3db3758568817ec108eb63065}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a36f119c3db3758568817ec108eb63065}
+\hypertarget{TestInteger_8c_09_09_a26547e29d40993af6eb8ea4ff5706979}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mod\-\_\-eq\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a26547e29d40993af6eb8ea4ff5706979}
+\hypertarget{TestInteger_8c_09_09_ac740b7b7c722a8335d3faa5beff027ed}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-left\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac740b7b7c722a8335d3faa5beff027ed}
+\hypertarget{TestInteger_8c_09_09_a5b92261d9dfec163099bcb992d010f1c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-left\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5b92261d9dfec163099bcb992d010f1c}
+\hypertarget{TestInteger_8c_09_09_ae9ed3e47eb2ded00700aabcf2ccf9d6a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-left\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae9ed3e47eb2ded00700aabcf2ccf9d6a}
+\hypertarget{TestInteger_8c_09_09_a3196445ee2db0cea5c55857ec9095d7e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-left\-\_\-eq\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a3196445ee2db0cea5c55857ec9095d7e}
+\hypertarget{TestInteger_8c_09_09_ab91e3f9b510a037011043aa9f86a918d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-right\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab91e3f9b510a037011043aa9f86a918d}
+\hypertarget{TestInteger_8c_09_09_a49aa379b2f6783dd847af3791ffd7a7c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-right\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a49aa379b2f6783dd847af3791ffd7a7c}
+\hypertarget{TestInteger_8c_09_09_aa880de9340ed39214db5ddca6742ae3c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-right\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aa880de9340ed39214db5ddca6742ae3c}
+\hypertarget{TestInteger_8c_09_09_a9de0a04069cdba0d3b0f7390791eae81}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-right\-\_\-eq\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9de0a04069cdba0d3b0f7390791eae81}
+\hypertarget{TestInteger_8c_09_09_a67c6be927a65f050a850d57b8c62ba4e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{abs\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a67c6be927a65f050a850d57b8c62ba4e}
+\hypertarget{TestInteger_8c_09_09_a4a84e53aaa6ac60ae0c975f07a3d6d6d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{abs\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a4a84e53aaa6ac60ae0c975f07a3d6d6d}
+\hypertarget{TestInteger_8c_09_09_a9ff96d62c1540bd68cfa98cf5e6f1c44}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{abs\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9ff96d62c1540bd68cfa98cf5e6f1c44}
+\hypertarget{TestInteger_8c_09_09_ac202bf13a21c16463a79d16f3151009b}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac202bf13a21c16463a79d16f3151009b}
+\hypertarget{TestInteger_8c_09_09_afd294dcefff9809ee26b3f1fb1624a54}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afd294dcefff9809ee26b3f1fb1624a54}
+\hypertarget{TestInteger_8c_09_09_a0950d70a3cb56b8119f1f06bbe47adc8}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0950d70a3cb56b8119f1f06bbe47adc8}
+\hypertarget{TestInteger_8c_09_09_a5480a05817d3837abf600a4c0d3859a6}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5480a05817d3837abf600a4c0d3859a6}
+\hypertarget{TestInteger_8c_09_09_a76eb8a7424eceb31fc9f9aff25bfcc5b}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a76eb8a7424eceb31fc9f9aff25bfcc5b}
+\hypertarget{TestInteger_8c_09_09_a11de2836e19f8d16cbf45eda24a25e2e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a11de2836e19f8d16cbf45eda24a25e2e}
+\hypertarget{TestInteger_8c_09_09_a5faed6e075e626d924a5038010e24ed1}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{pow\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5faed6e075e626d924a5038010e24ed1}
+\hypertarget{TestInteger_8c_09_09_a3030d897766f58ca575f5aa8be6e7ff3}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-equals\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a3030d897766f58ca575f5aa8be6e7ff3}
+\hypertarget{TestInteger_8c_09_09_a5f2176aa8f9be74c7ec71bb1fc1a7b5a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-equals\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5f2176aa8f9be74c7ec71bb1fc1a7b5a}
+\hypertarget{TestInteger_8c_09_09_a212bf77a1bb45dbfc2dee9d0902c6ab0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-equals\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a212bf77a1bb45dbfc2dee9d0902c6ab0}
+\hypertarget{TestInteger_8c_09_09_abde0188fadc7e8b7bda767c42de77500}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-equals\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_abde0188fadc7e8b7bda767c42de77500}
+\hypertarget{TestInteger_8c_09_09_a17d2c4b9aecb504b5ad648902bbbff9f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-not\-\_\-equals\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a17d2c4b9aecb504b5ad648902bbbff9f}
+\hypertarget{TestInteger_8c_09_09_a7223fe1424f2838d9de6e2d8e09e52bf}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-not\-\_\-equals\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7223fe1424f2838d9de6e2d8e09e52bf}
+\hypertarget{TestInteger_8c_09_09_a99788ee595f09f53f623a74234204bfd}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-not\-\_\-equals\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a99788ee595f09f53f623a74234204bfd}
+\hypertarget{TestInteger_8c_09_09_a844d0e36f0242e44fed4bc2a0d7593ec}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-not\-\_\-equals\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a844d0e36f0242e44fed4bc2a0d7593ec}
+\hypertarget{TestInteger_8c_09_09_a8bef4df25d3edab3ce563c909519073a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8bef4df25d3edab3ce563c909519073a}
+\hypertarget{TestInteger_8c_09_09_a1b22f5f2fd068303f9478e073e0da5b0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a1b22f5f2fd068303f9478e073e0da5b0}
+\hypertarget{TestInteger_8c_09_09_ac98c8fc00d9541ab1058a48c339e9e1b}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac98c8fc00d9541ab1058a48c339e9e1b}
+\hypertarget{TestInteger_8c_09_09_ac8421d10450d41bd63000cc3563cce71}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac8421d10450d41bd63000cc3563cce71}
+\hypertarget{TestInteger_8c_09_09_a79c68d5c1653e1b34b28bafe98aecc83}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a79c68d5c1653e1b34b28bafe98aecc83}
+\hypertarget{TestInteger_8c_09_09_ab12dc2f9b4ae1491239e8a9c5b667b17}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-less\-\_\-than\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab12dc2f9b4ae1491239e8a9c5b667b17}
+\hypertarget{TestInteger_8c_09_09_a73dc0d3bdf8ce7956856268859fdb308}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a73dc0d3bdf8ce7956856268859fdb308}
+\hypertarget{TestInteger_8c_09_09_ac8587dbe8467a3d75704698bd96a3940}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac8587dbe8467a3d75704698bd96a3940}
+\hypertarget{TestInteger_8c_09_09_a836a9bfba639688878367430a051c41e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a836a9bfba639688878367430a051c41e}
+\hypertarget{TestInteger_8c_09_09_a8aa2e39077146443fc054fdb59822036}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8aa2e39077146443fc054fdb59822036}
+\hypertarget{TestInteger_8c_09_09_a2c39aeca0277a460d12a4fbf09327383}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2c39aeca0277a460d12a4fbf09327383}
+\hypertarget{TestInteger_8c_09_09_af996ff313ae5b166cffa12dd7debd4dc}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-greater\-\_\-than\-\_\-eq\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_af996ff313ae5b166cffa12dd7debd4dc}
+\hypertarget{TestInteger_8c_09_09_a281452f2544b37cd908581100e1f68ce}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a281452f2544b37cd908581100e1f68ce}
+\hypertarget{TestInteger_8c_09_09_a0467c5cee94a7c32ed33fd853c93b3a6}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0467c5cee94a7c32ed33fd853c93b3a6}
+\hypertarget{TestInteger_8c_09_09_ac4164f23db3cae226f195eae093967f8}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac4164f23db3cae226f195eae093967f8}
+\hypertarget{TestInteger_8c_09_09_a8bea23c00c0cf61062ca8b63698ff5ef}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8bea23c00c0cf61062ca8b63698ff5ef}
+\hypertarget{TestInteger_8c_09_09_a25938edcc0ca0460b515127e81f768bf}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a25938edcc0ca0460b515127e81f768bf}
+\hypertarget{TestInteger_8c_09_09_acafa97a36654c0387c39a3c15bae62e2}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-plus\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_acafa97a36654c0387c39a3c15bae62e2}
+\hypertarget{TestInteger_8c_09_09_a2a8082b4e62fadc92a2e53daa9ceb715}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2a8082b4e62fadc92a2e53daa9ceb715}
+\hypertarget{TestInteger_8c_09_09_a9f485a8088dedcfce34a614822126d11}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9f485a8088dedcfce34a614822126d11}
+\hypertarget{TestInteger_8c_09_09_a909dd5ab8bf98a4e34def825805a1f6d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a909dd5ab8bf98a4e34def825805a1f6d}
+\hypertarget{TestInteger_8c_09_09_aa5762bbe95c731305507c07e3b180794}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aa5762bbe95c731305507c07e3b180794}
+\hypertarget{TestInteger_8c_09_09_a2c4a605ee659922c0f828d85191e2727}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2c4a605ee659922c0f828d85191e2727}
+\hypertarget{TestInteger_8c_09_09_a3b44adfcc236126180bd6734f0e0286a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a3b44adfcc236126180bd6734f0e0286a}
+\hypertarget{TestInteger_8c_09_09_ac0aacd4e05c03b6a6c3d995a216f63e5}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac0aacd4e05c03b6a6c3d995a216f63e5}
+\hypertarget{TestInteger_8c_09_09_afec838c3ccfddb558ef126d8631a3f25}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afec838c3ccfddb558ef126d8631a3f25}
+\hypertarget{TestInteger_8c_09_09_a9cd6b1d672643cef18fd7f4a0dd8c9e5}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-minus\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9cd6b1d672643cef18fd7f4a0dd8c9e5}
+\hypertarget{TestInteger_8c_09_09_a23f9b2ec0bbeca6106f90b2c422c71be}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a23f9b2ec0bbeca6106f90b2c422c71be}
+\hypertarget{TestInteger_8c_09_09_afbf936f5f57404921fd1c3c384628ab4}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afbf936f5f57404921fd1c3c384628ab4}
+\hypertarget{TestInteger_8c_09_09_a921044d19761fe313a6bd4607b8485d1}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a921044d19761fe313a6bd4607b8485d1}
+\hypertarget{TestInteger_8c_09_09_ad0da936adb53c0589eb5198b8f26b322}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ad0da936adb53c0589eb5198b8f26b322}
+\hypertarget{TestInteger_8c_09_09_a299cac4c53289cfb82c63694fccbfb1f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a299cac4c53289cfb82c63694fccbfb1f}
+\hypertarget{TestInteger_8c_09_09_ab177c9c8c4b05225c41cabae2024e2f4}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab177c9c8c4b05225c41cabae2024e2f4}
+\hypertarget{TestInteger_8c_09_09_a49afd0fa971700362e9bd2ec6a3b81ac}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a49afd0fa971700362e9bd2ec6a3b81ac}
+\hypertarget{TestInteger_8c_09_09_a81774525491ff8a76fa0f0299787303a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a81774525491ff8a76fa0f0299787303a}
+\hypertarget{TestInteger_8c_09_09_a4286276c9dc9c6908a7783d1ab8fb67f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-multiply\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a4286276c9dc9c6908a7783d1ab8fb67f}
+\hypertarget{TestInteger_8c_09_09_a81da8f394ef78dd20bd9f76746d17858}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a81da8f394ef78dd20bd9f76746d17858}
+\hypertarget{TestInteger_8c_09_09_a52406787b21c9201f1d72223895386ae}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a52406787b21c9201f1d72223895386ae}
+\hypertarget{TestInteger_8c_09_09_a9e847df31f5de88b6766d7550a916e1a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a9e847df31f5de88b6766d7550a916e1a}
+\hypertarget{TestInteger_8c_09_09_a5379c16d66de9a99f31148b022fd5e2a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5379c16d66de9a99f31148b022fd5e2a}
+\hypertarget{TestInteger_8c_09_09_aafaf249532835d59c375635d925b43ab}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aafaf249532835d59c375635d925b43ab}
+\hypertarget{TestInteger_8c_09_09_a02df82b4884a5be95a48c6fa553d72a0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a02df82b4884a5be95a48c6fa553d72a0}
+\hypertarget{TestInteger_8c_09_09_acf45a7a9d694d24c985b0353801d8a61}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-7}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_acf45a7a9d694d24c985b0353801d8a61}
+\hypertarget{TestInteger_8c_09_09_ad9887f6d24d65196b8d5f6777060ad37}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-8}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ad9887f6d24d65196b8d5f6777060ad37}
+\hypertarget{TestInteger_8c_09_09_a5b0559eb343740553c6f9a17d9884b84}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-9}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a5b0559eb343740553c6f9a17d9884b84}
+\hypertarget{TestInteger_8c_09_09_a0ca6f67e52ffadc981b5320ab944bc3e}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-divide\-\_\-10}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a0ca6f67e52ffadc981b5320ab944bc3e}
+\hypertarget{TestInteger_8c_09_09_ad1c18471fe759f4b650ac03788d95b21}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ad1c18471fe759f4b650ac03788d95b21}
+\hypertarget{TestInteger_8c_09_09_ada3ec8b05801545e392c2d436ffca830}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ada3ec8b05801545e392c2d436ffca830}
+\hypertarget{TestInteger_8c_09_09_ab07059c9569d6a6d07cbf2445e51bbc5}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab07059c9569d6a6d07cbf2445e51bbc5}
+\hypertarget{TestInteger_8c_09_09_afc8a179775a7711fb0248c1ed0642c7b}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afc8a179775a7711fb0248c1ed0642c7b}
+\hypertarget{TestInteger_8c_09_09_aad30bd573a51d22f6dc0f82a0bb51f75}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aad30bd573a51d22f6dc0f82a0bb51f75}
+\hypertarget{TestInteger_8c_09_09_a2f081f72e14ad18da7c454474170317f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-mod\-\_\-6}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a2f081f72e14ad18da7c454474170317f}
+\hypertarget{TestInteger_8c_09_09_aa052cd6237ecf6964967964627528bd0}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-left\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aa052cd6237ecf6964967964627528bd0}
+\hypertarget{TestInteger_8c_09_09_a367f89a2b04f6330cb926ce8158e7012}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-left\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a367f89a2b04f6330cb926ce8158e7012}
+\hypertarget{TestInteger_8c_09_09_a8d8e79d0117bd953579c92dc4575e062}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-left\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8d8e79d0117bd953579c92dc4575e062}
+\hypertarget{TestInteger_8c_09_09_a1be4ee5c96dd6244f4d213d69583e846}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-left\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a1be4ee5c96dd6244f4d213d69583e846}
+\hypertarget{TestInteger_8c_09_09_ae35f463426567b32b2d638d7bd48f598}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-right\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ae35f463426567b32b2d638d7bd48f598}
+\hypertarget{TestInteger_8c_09_09_a85bdb1e53706fabdbd4f677958b352ee}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-right\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a85bdb1e53706fabdbd4f677958b352ee}
+\hypertarget{TestInteger_8c_09_09_aaf48367e377dd846e9f40d7aa61f4f02}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-right\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aaf48367e377dd846e9f40d7aa61f4f02}
+\hypertarget{TestInteger_8c_09_09_a902d7908363cdab999bcb962fb466dbc}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-shift\-\_\-right\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a902d7908363cdab999bcb962fb466dbc}
+\hypertarget{TestInteger_8c_09_09_ac978f2e9212e14974ab225fc44630050}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{ostream\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac978f2e9212e14974ab225fc44630050}
+\hypertarget{TestInteger_8c_09_09_a428babe6d9f982de9b44007179a973c7}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{ostream\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a428babe6d9f982de9b44007179a973c7}
+\hypertarget{TestInteger_8c_09_09_ab4569a08d3ad92ce7381311c557a513f}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{ostream\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab4569a08d3ad92ce7381311c557a513f}
+\hypertarget{TestInteger_8c_09_09_a8156355c6d2c1293d20fdfebbcbd9c75}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-abs\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a8156355c6d2c1293d20fdfebbcbd9c75}
+\hypertarget{TestInteger_8c_09_09_a538cf11f9c670fe61c6e4fa2d0f20d93}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-abs\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a538cf11f9c670fe61c6e4fa2d0f20d93}
+\hypertarget{TestInteger_8c_09_09_ab84c8e5de8347615c4489eb3f726e291}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-abs\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ab84c8e5de8347615c4489eb3f726e291}
+\hypertarget{TestInteger_8c_09_09_a6959b6312987905f66f14d3964750f46}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-pow\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a6959b6312987905f66f14d3964750f46}
+\hypertarget{TestInteger_8c_09_09_a7781293effc559ae75c90b531c18838d}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-pow\-\_\-2}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7781293effc559ae75c90b531c18838d}
+\hypertarget{TestInteger_8c_09_09_a96f53268237ae6caecf82dee008ba62c}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-pow\-\_\-3}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a96f53268237ae6caecf82dee008ba62c}
+\hypertarget{TestInteger_8c_09_09_a3e329bc3fd8a6f86438a23ad2d4c092a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-pow\-\_\-4}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a3e329bc3fd8a6f86438a23ad2d4c092a}
+\hypertarget{TestInteger_8c_09_09_acf8b60c2332ff6dd73673c354a5abab5}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{f\-\_\-pow\-\_\-5}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_acf8b60c2332ff6dd73673c354a5abab5}
+\hypertarget{TestInteger_8c_09_09_a013a297a1b08b30e0dcb746952764a2a}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-left\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a013a297a1b08b30e0dcb746952764a2a}
+\hypertarget{TestInteger_8c_09_09_a95b8f68e2988a37232494c60c0e8ca15}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{shift\-\_\-right\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a95b8f68e2988a37232494c60c0e8ca15}
+\hypertarget{TestInteger_8c_09_09_ac1865dc8ee59efbe927076dfb952b572}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{plus\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_ac1865dc8ee59efbe927076dfb952b572}
+\hypertarget{TestInteger_8c_09_09_a7882d37506c29f367c57c480f6d32321}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{minus\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a7882d37506c29f367c57c480f6d32321}
+\hypertarget{TestInteger_8c_09_09_aaa1c0cd66ee99d32993014c9156a7dab}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{multiply\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_aaa1c0cd66ee99d32993014c9156a7dab}
+\hypertarget{TestInteger_8c_09_09_afd58fc7cb24809a388b3af1b70eb9f94}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{divide\-\_\-digits\-\_\-1}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_afd58fc7cb24809a388b3af1b70eb9f94}
+\hypertarget{TestInteger_8c_09_09_a15a34a8ba62851147163edcf3922f3e6}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mersenne\-\_\-20\-\_\-vector\-\_\-timing}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a15a34a8ba62851147163edcf3922f3e6}
+\hypertarget{TestInteger_8c_09_09_a943732aad5273df87a4822f32c9b9471}{\index{Test\-Integer.\-c++@{Test\-Integer.\-c++}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!TestInteger.c++@{Test\-Integer.\-c++}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-E\-S\-T (
+\begin{DoxyParamCaption}
+\item[{Integer\-Fixture}]{, }
+\item[{mersenne\-\_\-20\-\_\-deque\-\_\-timing}]{}
+\end{DoxyParamCaption}
+)}}\label{TestInteger_8c_09_09_a943732aad5273df87a4822f32c9b9471}
