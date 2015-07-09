@@ -9,7 +9,8 @@ FILES :=                              \
     RunInteger.c++                    \
     RunInteger.out                    \
     TestInteger.c++                   \
-    TestInteger.out
+    TestInteger.out					\
+	makefile
 
 ifeq ($(CXX), clang++)
     COVFLAGS := --coverage
@@ -44,7 +45,7 @@ clean:
 config:
 	git config -l
 
-test: TestInteger.out
+test: RunInteger.out TestInteger.out
 
 run: RunInteger.out
 
