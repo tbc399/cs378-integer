@@ -1,0 +1,163 @@
+commit 97b591ddc476d6ed91e69e64b1a12aed0229a256
+Merge: 6d89dd8 e0859b0
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 22:00:51 2015 -0500
+
+    Merge branch 'dev'
+
+commit 6d89dd846e48a1aedfbac03788e798fa7d11a989
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:59:13 2015 -0500
+
+    adding travis file and test file to master
+
+commit e0859b0431dc94da85088f7766a0ea86b11dccd9
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:50:16 2015 -0500
+
+    commented out the 30th prime to run faster for Travis CI
+
+commit 3c2f9a4fe155bf8fccac41d203dc4c96f8865219
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:40:25 2015 -0500
+
+    updated travis to include sudo: required
+
+commit 40b3b9adc8f38f7e176f5cfd9ae10c4a733d2286
+Merge: caca849 df534ff
+Author: Travis Cammack <tbc399@cs.utexas.edu>
+Date:   Wed Jul 8 21:32:31 2015 -0500
+
+    Merge branch 'dev' of github.com:tbc399/cs378-integer into dev
+
+commit caca8499cd5c129e1f68cc81a97aa19ff451523a
+Author: Travis Cammack <tbc399@cs.utexas.edu>
+Date:   Wed Jul 8 21:31:36 2015 -0500
+
+    added RunInteger.out
+
+commit df534ff299fb1939d3221642636efbdbe239fb0d
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:28:51 2015 -0500
+
+    reverted some changes to Integer.h
+
+commit c504917e549b2514092630aa404bdfeb0399de4a
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:20:13 2015 -0500
+
+    TestInteger.out has some weird Valgrind output but there are no leaks and every test passes
+
+commit 22d6bc8486ca47c982c7e78df18b1426e64cdabc
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:12:20 2015 -0500
+
+    updated documentation
+
+commit 2d7cbfc2d1c52739808ae4a39ea53c53cba8d31e
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:03:19 2015 -0500
+
+    added the Doxyfile and produced the doxygen documentation
+
+commit 145b31677ad086ec0847c9ca13a2f2df34061507
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 21:01:27 2015 -0500
+
+    documented Integer and produced TestInteger.out
+
+commit 08a78d80c81950f40749a17e58f7075aef631859
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 19:40:25 2015 -0500
+
+    removed test for 30th Mersenne prime to save time
+
+commit 5d6859c0da0abbd5070523c2ecd4dbca16ccc6ae
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 19:29:32 2015 -0500
+
+    added and edited the .travis.yml file and updated the makefile to work with when pushed through Travis CI
+
+commit f8b3897c23e611df770721b5c77434edc8b8b841
+Author: Travis Cammack <tbc399@cs.utexas.edu>
+Date:   Wed Jul 8 18:49:29 2015 -0500
+
+    added extra test case to TestInteger.c++ to compute the 30th Mersenne prime
+
+commit 9b9a07a423c4b34f7f02c92c05844ed7d5fa1f6d
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 13:42:37 2015 -0500
+
+    close #11 close #12: implemented Karatsuba but did not gain much speed
+
+commit b2fdd6a2a6f884e3c808af8a599fcdf37ac8fe7f
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 09:34:12 2015 -0500
+
+    close #10: fixed the broken friend operator-(). The problem was in basic_minus_eq
+
+commit a9aafc6f778dbdf3ff37e06292dc6cdc6846d0d4
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jul 7 14:32:00 2015 -0500
+
+    close #6: fixed *= using simple long multiplication
+
+commit c5a8c460bae1269316b3308c5a096022fdb4f6c3
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jul 6 21:25:55 2015 -0500
+
+    got basic_multiply_eq() to work
+
+commit de875f4fb710eaafe2eaa9ce7dd87a1fcaabb1a4
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jul 6 13:36:13 2015 -0500
+
+    writing tests for the different functions
+
+commit 7e78a83cd71aea2b537e148002535100e8020519
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Sat Jul 4 18:59:49 2015 -0500
+
+    added the test file
+
+commit 55f7dc82bfc6aa9256f71fa0fdcb8674e317ff74
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jul 3 00:06:04 2015 -0500
+
+    first implementation of operator<()
+
+commit 2b2273fd71e26decea0dac279e8070ae9fcf1b37
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jul 2 23:04:36 2015 -0500
+
+    first implementation of Integer::operator<<=()
+
+commit c3f6ddf3895765e58d55eac58eb9685fcd75471b
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jul 2 13:37:40 2015 -0500
+
+    first implementation of Integer::operator*=()
+
+commit 5ddb73110622d4da2ce09b36a97e246301b5e186
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 1 12:11:59 2015 -0500
+
+    first implementation of Integer::operator-=()
+
+commit 19e7233c4c4ae2ac8de7605b1dd4921882400345
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 30 21:39:58 2015 -0500
+
+    first implementation of basic_plus_eq() and += operator
+
+commit 8841b195188ca6a8357989e24da3e8a86595aa7c
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 30 01:02:02 2015 -0500
+
+    added bool Integer::negative
+
+commit 6393251cc6f812ae5fdd50550270edfdb6d5d408
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jun 29 13:37:28 2015 -0500
+
+    initial commit
