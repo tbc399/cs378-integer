@@ -34,7 +34,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Check to see if two Integers have the same sign and content
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if the Integers are the same
      */
     friend bool operator == (const Integer& lhs, const Integer& rhs) {
         // <your code>
@@ -52,7 +55,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Check to see if two Integers are not equal
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if the Integers are NOT the same
      */
     friend bool operator != (const Integer& lhs, const Integer& rhs) {
         return !(lhs == rhs);}
@@ -62,7 +68,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Check to see if one Integer is less than another
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if lhs is less than rhs
      */
     friend bool operator < (const Integer& lhs, const Integer& rhs) {
         // <your code>
@@ -100,7 +109,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Check to see if one Integer is less than or equal to another
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if lhs is less than OR is equal to rhs
      */
     friend bool operator <= (const Integer& lhs, const Integer& rhs) {
         return !(rhs < lhs);}
@@ -110,7 +122,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Check to see if one Integer is greater than another
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if rhs is greater than lhs
      */
     friend bool operator > (const Integer& lhs, const Integer& rhs) {
         return (rhs < lhs);}
@@ -120,7 +135,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Check to see if one Integer is greater than or equal to another
+     * @param lhs the left hand side of the predicate
+     * @param rhs the right hand side of the predicate
+     * @return true if rhs is greater than OR is equal to lhs
      */
     friend bool operator >= (const Integer& lhs, const Integer& rhs) {
         return !(lhs < rhs);}
@@ -130,7 +148,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Adds two Integers together
+     * @param lhs the left hand side of the addition
+     * @param rhs the right had side of the addition
+     * @return an Integer representing the sum of lhs and rhs
      */
     friend Integer operator + (Integer lhs, const Integer& rhs) {
         return lhs += rhs;}
@@ -140,7 +161,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Subtracts an Integer from another Integer
+     * @param lhs the left hand side of the subtraction
+     * @param rhs the right hand side of the subtraction
+     * @return an Integer representing the difference of lhs and rhs
      */
     friend Integer operator - (Integer lhs, const Integer& rhs) {
         return lhs -= rhs;}
@@ -150,7 +174,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Multiplies an Integer by another Integer
+     * @param lhs the left hand side of the multiplication
+     * @param rhs the right hand side of the multiplication
+     * @return an Integer representing the product of lhs and rhs
      */
     friend Integer operator * (Integer lhs, const Integer& rhs) {
         return lhs *= rhs;}
@@ -160,7 +187,10 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Divides an Integer by another Integer
+     * @param lhs the dividend
+     * @param rhs the divisor
+     * @return an Integer representing the quotient of lhs / rhs
      * @throws invalid_argument if (rhs == 0)
      */
     friend Integer operator / (Integer lhs, const Integer& rhs) {
@@ -171,7 +201,11 @@ class Integer {
     // ----------
 
     /**
-     * <your documentation>
+     * Performs the modulus operation on two Integers
+     * @param lhs the left hand side of the operation
+     * @param rhs the right hand side of the operation
+     * @return an Integer representing the result of lhs modulo rhs
+     *  which is effectively the remainder of lhs / rhs
      * @throws invalid_argument if (rhs <= 0)
      */
     friend Integer operator % (Integer lhs, const Integer& rhs) {
@@ -182,7 +216,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Shift an Integer to the left
+     * @param lhs the Integer to be shifted
+     * @param rhs the number of bits to left shift lhs
+     * @return an Integer representing lhs shifted left by rhs bits
      * @throws invalid_argument if (rhs < 0)
      */
     friend Integer operator << (Integer lhs, int rhs) {
@@ -193,7 +230,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Shift an Integer to the right
+     * @param lhs the Integer to be shifted
+     * @param rhs the number of bits to right shift lhs
+     * @return an Integer representing lhs shifted right by rhs bits
      * @throws invalid_argument if (rhs < 0)
      */
     friend Integer operator >> (Integer lhs, int rhs) {
@@ -204,7 +244,10 @@ class Integer {
     // -----------
 
     /**
-     * <your documentation>
+     * Write out an Integer to an ostream object
+     * @param lsh the ostream to write out to
+     * @param rhs the Integer to write out
+     * @return the ostream object pasted in through lhs
      */
     friend ostream& operator << (ostream& lhs, const Integer& rhs) {
         // <your code>
@@ -222,8 +265,9 @@ class Integer {
     // ---
 
     /**
-     * absolute value
-     * <your documentation>
+     * Absolute value
+     * @param x an Integer
+     * @return the absolute value of the Integer x
      */
     friend Integer abs (Integer x) {
         return x.abs();}
@@ -233,8 +277,10 @@ class Integer {
     // ---
 
     /**
-     * power
-     * <your documentation>
+     * Power
+     * @param x an Integer
+     * @param e an int
+     * @return an Integer representing x raised to e
      * @throws invalid_argument if ((x == 0) && (e == 0)) || (e < 0)
      */
     friend Integer pow (Integer x, int e) {
@@ -272,6 +318,12 @@ class Integer {
         
         }
         
+        /**
+         * A helper function to *= that implements simple addition
+         * @param lhs the left hand side of the sum
+         * @param rhs the right hand side of the sum
+         * @return the sum of lhs and rhs stored in lhs
+         */
         Integer& basic_plus_eq(Integer& lhs, const Integer& rhs) {
             C rev_sum;
             bool carry = false;
@@ -317,6 +369,12 @@ class Integer {
             return lhs;
         }
         
+        /**
+         * A helper function to -= that implements simple subtraction
+         * @param lhs the left hand side of the subtraction
+         * @param rhs the right hand side of the subtraction
+         * @return the difference of lhs and rhs stored in lhs
+         */
         Integer& basic_minus_eq (Integer& lhs, const Integer& rhs) {
             C rev_diff;
             bool borrow = false;
@@ -389,6 +447,12 @@ class Integer {
             return lhs;
         }
         
+        /**
+         * A helper function to *= that implements simple long multiplication
+         * @param lhs the left hand side of the multiplication
+         * @param rhs the right hand side of the multiplication
+         * @return the product of lhs and rhs stored in lhs
+         */
         Integer& basic_multiply (Integer& lhs, const Integer& rhs) {
             
             vector<vector<T>> nums(rhs._x.size());
@@ -453,7 +517,8 @@ class Integer {
         // ------------
 
         /**
-         * <your documentation>
+         * Construct an Integer from an int
+         * @param value an int
          */
         Integer (int value) {
             // <your code>
@@ -478,7 +543,8 @@ class Integer {
         }
 
         /**
-         * <your documentation>
+         * Construct an Integer from a string representation
+         * @param value a string
          * @throws invalid_argument if value is not a valid representation of an Integer
          */
         explicit Integer (const std::string& value) {
@@ -512,7 +578,8 @@ class Integer {
         // ----------
 
         /**
-         * <your documentation>
+         * Negation
+         * @return the negation of this Integer
          */
         Integer operator - () const {
             
@@ -536,14 +603,16 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Pre-increment
+         * @return this Integer after incrementing by 1
          */
         Integer& operator ++ () {
             *this += 1;
             return *this;}
 
         /**
-         * <your documentation>
+         * Post-increment
+         * @return a copy of this Integer
          */
         Integer operator ++ (int) {
             Integer x = *this;
@@ -555,14 +624,16 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Pre-decrement
+         * @return this Integer after decrementing by 1
          */
         Integer& operator -- () {
             *this -= 1;
             return *this;}
 
         /**
-         * <your documentation>
+         * Post-decrement
+         * @return a copy of this Integer
          */
         Integer operator -- (int) {
             Integer x = *this;
@@ -574,7 +645,9 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Plus equal
+         * @param rhs the Integer to add to this Integer
+         * @return the sum of this Integer and rhs stored in this Integer
          */
         Integer& operator += (const Integer& rhs) {
             // <your code>
@@ -597,7 +670,9 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Minus equal
+         * @param rhs the Integer to subtract from this Integer
+         * @return the difference of this Integer and rhs stored in this Integer
          */
         Integer& operator -= (const Integer& rhs) {
             // <your code>
@@ -620,7 +695,9 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Multiply equal
+         * @param rhs the Integer to multiply with this Integer
+         * @return the product of this Integer and rhs stored in this Integer
          */
         Integer& operator *= (const Integer& rhs) {
             // <your code>
@@ -717,7 +794,9 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Divide equal
+         * @param rhs the divisor
+         * @return the quotient stored in this Integer
          * @throws invalid_argument if (rhs == 0)
          */
         Integer& operator /= (const Integer& rhs) {
@@ -754,7 +833,9 @@ class Integer {
         // -----------
 
         /**
-         * <your documentation>
+         * Modulo equal
+         * @param rhs the Integer to mod this Integer by
+         * @return the mod of this Integer with rhs stored in this Integer
          * @throws invalid_argument if (rhs <= 0)
          */
         Integer& operator %= (const Integer& rhs) {
@@ -794,7 +875,9 @@ class Integer {
         // ------------
 
         /**
-         * <your documentation>
+         * Left-shift equal
+         * @param n the number of bits to shift this Integer to the left by
+         * @return this Integer shifted left by n bits
          */
         Integer& operator <<= (int n) {
             // <your code>
@@ -829,7 +912,9 @@ class Integer {
         // ------------
 
         /**
-         * <your documentation>
+         * Right-shift equal
+         * @param n the number of bits to shift this Integer to the right by
+         * @return this Integer shifted right by n bits
          */
         Integer& operator >>= (int n) {
             // <your code>
@@ -871,8 +956,8 @@ class Integer {
         // ---
 
         /**
-         * absolute value
-         * <your documentation>
+         * Absolute value
+         * @return the absolute value of this Integer returned by reference
          */
         Integer& abs () {
             
@@ -889,8 +974,9 @@ class Integer {
         // ---
 
         /**
-         * power
-         * <your documentation>
+         * Power
+         * @param e an int
+         * @return this Integer raised to the e power
          * @throws invalid_argument if ((this == 0) && (e == 0)) or (e < 0)
          */
         Integer& pow (int e) {
