@@ -709,8 +709,10 @@ class Integer {
                 return *this = -rhs;
             if (rhs == 1)
                 return *this;
-            if (rhs == -1)
-                return *this = -*this;
+            if (rhs == -1) {
+                *this = -(*this);
+                return *this;
+            }
             
             // <your code>
             if (this->_x.size() <= 4 || rhs._x.size() <= 4) {
