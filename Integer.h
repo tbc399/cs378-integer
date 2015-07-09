@@ -245,7 +245,7 @@ class Integer {
 
     /**
      * Write out an Integer to an ostream object
-     * @param lsh the ostream to write out to
+     * @param lhs the ostream to write out to
      * @param rhs the Integer to write out
      * @return the ostream object pasted in through lhs
      */
@@ -756,30 +756,18 @@ class Integer {
                     }
                 }
                 
-                //cout << "x_1 = " << x_1 << "\n";
-                //cout << "x_0 = " << x_0 << "\n";
-                //cout << "y_1 = " << y_1 << "\n";
-                //cout << "y_0 = " << y_0 << "\n";
-                
                 Integer z_0 = x_0 * y_0;
                 Integer z_1 = (x_1 + x_0) * (y_1 + y_0);
                 Integer z_2 = x_1 * y_1;
-                
-                //cout << "z_0 = " << z_0 << "\n";
-                //cout << "z_1 = " << z_1 << "\n";
-                //cout << "z_2 = " << z_2 << "\n";
                 
                 Integer B(10);
                 B.pow(split_len);
                 Integer B_2(10);
                 B_2.pow(split_len * 2);
                 
-                //cout << "("<<z_2<<" * "<<B_2<<") + (("<<z_1<<" - "<<z_2<<" - "<<z_0<<") * "<<B<<") + "<<z_0<< "\n";
                 *this = (z_2 * B_2) + ((z_1 - z_2 - z_0) * B) + z_0;
-                //*this = (B_2 + B)*x_1*y_1 - B*(x_1 - x_0)*(y_1 - y_0) + (B + 1)*x_0*y_0;
+
             }
-            
-            //basic_multiply(*this, rhs);
             
             if ((positive && rhs.positive) || (!positive && !rhs.positive))
                 positive = true;
@@ -1021,6 +1009,7 @@ class Integer {
 /**
  * @param b an iterator to the beginning of an input  sequence (inclusive)
  * @param e an iterator to the end       of an input  sequence (exclusive)
+ * @param n the number of bits to shift
  * @param x an iterator to the beginning of an output sequence (inclusive)
  * @return  an iterator to the end       of an output sequence (exclusive)
  * the sequences are of decimal digits
@@ -1064,6 +1053,7 @@ FI shift_left_digits (II b, II e, int n, FI x) {
 /**
  * @param b an iterator to the beginning of an input  sequence (inclusive)
  * @param e an iterator to the end       of an input  sequence (exclusive)
+ * @param n the number of bits to shift
  * @param x an iterator to the beginning of an output sequence (inclusive)
  * @return  an iterator to the end       of an output sequence (exclusive)
  * the sequences are of decimal digits
@@ -1105,8 +1095,8 @@ FI shift_right_digits (II b, II e, int n, FI x) {
 // -----------
 
 /**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b1  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e1  an iterator to the end       of an input  sequence (exclusive)
  * @param b2 an iterator to the beginning of an input  sequence (inclusive)
  * @param e2 an iterator to the end       of an input  sequence (exclusive)
  * @param x  an iterator to the beginning of an output sequence (inclusive)
@@ -1158,8 +1148,8 @@ FI plus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
 // ------------
 
 /**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b1  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e1  an iterator to the end       of an input  sequence (exclusive)
  * @param b2 an iterator to the beginning of an input  sequence (inclusive)
  * @param e2 an iterator to the end       of an input  sequence (exclusive)
  * @param x  an iterator to the beginning of an output sequence (inclusive)
@@ -1212,8 +1202,8 @@ FI minus_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
 // -----------------
 
 /**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b1  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e1  an iterator to the end       of an input  sequence (exclusive)
  * @param b2 an iterator to the beginning of an input  sequence (inclusive)
  * @param e2 an iterator to the end       of an input  sequence (exclusive)
  * @param x  an iterator to the beginning of an output sequence (inclusive)
@@ -1265,8 +1255,8 @@ FI multiplies_digits (II1 b1, II1 e1, II2 b2, II2 e2, FI x) {
 // --------------
 
 /**
- * @param b  an iterator to the beginning of an input  sequence (inclusive)
- * @param e  an iterator to the end       of an input  sequence (exclusive)
+ * @param b1  an iterator to the beginning of an input  sequence (inclusive)
+ * @param e1  an iterator to the end       of an input  sequence (exclusive)
  * @param b2 an iterator to the beginning of an input  sequence (inclusive)
  * @param e2 an iterator to the end       of an input  sequence (exclusive)
  * @param x  an iterator to the beginning of an output sequence (inclusive)
