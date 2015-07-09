@@ -1,3 +1,22 @@
+commit b934b3a0073889a8663f80a14841028a6268f879
+Merge: 7deb589 7ca908e
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jul 9 00:38:03 2015 -0500
+
+    Merge branch 'dev'
+
+commit 7ca908ed49555554f506f3d11ff7c898ded54828
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jul 9 00:28:52 2015 -0500
+
+    removed Integer.h from the compilation commands for TestInteger and RunInteger
+
+commit 7deb58900cf08c08259dcd98801e20dbf192ea1a
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Wed Jul 8 22:05:20 2015 -0500
+
+    added the commit log
+
 commit 97b591ddc476d6ed91e69e64b1a12aed0229a256
 Merge: 6d89dd8 e0859b0
 Author: Travis Cammack <cammack@utexas.edu>
