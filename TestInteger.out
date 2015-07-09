@@ -1,8 +1,8 @@
-==3639== Memcheck, a memory error detector
-==3639== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-==3639== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
-==3639== Command: ./TestInteger
-==3639== 
+==5157== Memcheck, a memory error detector
+==5157== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==5157== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==5157== Command: ./TestInteger
+==5157== 
 Running main() from gtest_main.cc
 [==========] Running 169 tests from 1 test case.
 [----------] Global test environment set-up.
@@ -10,7 +10,7 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.construct_1
 [       OK ] IntegerFixture.construct_1 (47 ms)
 [ RUN      ] IntegerFixture.construct_2
-[       OK ] IntegerFixture.construct_2 (9 ms)
+[       OK ] IntegerFixture.construct_2 (10 ms)
 [ RUN      ] IntegerFixture.construct_3
 [       OK ] IntegerFixture.construct_3 (5 ms)
 [ RUN      ] IntegerFixture.e_construct_1
@@ -26,13 +26,13 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.negation_3
 [       OK ] IntegerFixture.negation_3 (5 ms)
 [ RUN      ] IntegerFixture.plus_equal_1
-[       OK ] IntegerFixture.plus_equal_1 (17 ms)
+[       OK ] IntegerFixture.plus_equal_1 (16 ms)
 [ RUN      ] IntegerFixture.plus_equal_2
 [       OK ] IntegerFixture.plus_equal_2 (28 ms)
 [ RUN      ] IntegerFixture.plus_equal_3
-[       OK ] IntegerFixture.plus_equal_3 (6 ms)
+[       OK ] IntegerFixture.plus_equal_3 (5 ms)
 [ RUN      ] IntegerFixture.plus_equal_4
-[       OK ] IntegerFixture.plus_equal_4 (4 ms)
+[       OK ] IntegerFixture.plus_equal_4 (5 ms)
 [ RUN      ] IntegerFixture.plus_equal_5
 [       OK ] IntegerFixture.plus_equal_5 (16 ms)
 [ RUN      ] IntegerFixture.plus_equal_6
@@ -46,7 +46,7 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.minus_equal_4
 [       OK ] IntegerFixture.minus_equal_4 (4 ms)
 [ RUN      ] IntegerFixture.minus_equal_5
-[       OK ] IntegerFixture.minus_equal_5 (6 ms)
+[       OK ] IntegerFixture.minus_equal_5 (7 ms)
 [ RUN      ] IntegerFixture.minus_equal_6
 [       OK ] IntegerFixture.minus_equal_6 (4 ms)
 [ RUN      ] IntegerFixture.minus_equal_7
@@ -54,15 +54,15 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.minus_equal_8
 [       OK ] IntegerFixture.minus_equal_8 (5 ms)
 [ RUN      ] IntegerFixture.minus_equal_9
-[       OK ] IntegerFixture.minus_equal_9 (5 ms)
+[       OK ] IntegerFixture.minus_equal_9 (4 ms)
 [ RUN      ] IntegerFixture.pre_inc_1
 [       OK ] IntegerFixture.pre_inc_1 (5 ms)
 [ RUN      ] IntegerFixture.pre_inc_2
-[       OK ] IntegerFixture.pre_inc_2 (4 ms)
+[       OK ] IntegerFixture.pre_inc_2 (3 ms)
 [ RUN      ] IntegerFixture.pre_inc_3
 [       OK ] IntegerFixture.pre_inc_3 (3 ms)
 [ RUN      ] IntegerFixture.pre_inc_4
-[       OK ] IntegerFixture.pre_inc_4 (4 ms)
+[       OK ] IntegerFixture.pre_inc_4 (3 ms)
 [ RUN      ] IntegerFixture.post_inc_1
 [       OK ] IntegerFixture.post_inc_1 (4 ms)
 [ RUN      ] IntegerFixture.post_inc_2
@@ -76,23 +76,23 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.pre_dec_3
 [       OK ] IntegerFixture.pre_dec_3 (3 ms)
 [ RUN      ] IntegerFixture.pre_dec_4
-[       OK ] IntegerFixture.pre_dec_4 (3 ms)
+[       OK ] IntegerFixture.pre_dec_4 (4 ms)
 [ RUN      ] IntegerFixture.post_dec_1
 [       OK ] IntegerFixture.post_dec_1 (4 ms)
 [ RUN      ] IntegerFixture.post_dec_2
-[       OK ] IntegerFixture.post_dec_2 (4 ms)
+[       OK ] IntegerFixture.post_dec_2 (5 ms)
 [ RUN      ] IntegerFixture.post_dec_3
 [       OK ] IntegerFixture.post_dec_3 (4 ms)
 [ RUN      ] IntegerFixture.multiply_eq_1
-[       OK ] IntegerFixture.multiply_eq_1 (6 ms)
+[       OK ] IntegerFixture.multiply_eq_1 (5 ms)
 [ RUN      ] IntegerFixture.multiply_eq_2
-[       OK ] IntegerFixture.multiply_eq_2 (3 ms)
+[       OK ] IntegerFixture.multiply_eq_2 (4 ms)
 [ RUN      ] IntegerFixture.multiply_eq_3
 [       OK ] IntegerFixture.multiply_eq_3 (4 ms)
 [ RUN      ] IntegerFixture.multiply_eq_4
-[       OK ] IntegerFixture.multiply_eq_4 (34 ms)
+[       OK ] IntegerFixture.multiply_eq_4 (33 ms)
 [ RUN      ] IntegerFixture.multiply_eq_5
-[       OK ] IntegerFixture.multiply_eq_5 (4 ms)
+[       OK ] IntegerFixture.multiply_eq_5 (5 ms)
 [ RUN      ] IntegerFixture.multiply_eq_6
 [       OK ] IntegerFixture.multiply_eq_6 (4 ms)
 [ RUN      ] IntegerFixture.multiply_eq_7
@@ -100,88 +100,88 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.multiply_eq_8
 [       OK ] IntegerFixture.multiply_eq_8 (7 ms)
 [ RUN      ] IntegerFixture.multiply_eq_9
-==3639== Invalid read of size 4
-==3639==    at 0x447CD3: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==  Address 0x5cb43e4 is 0 bytes after a block of size 20 alloc'd
-==3639==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3639==    by 0x45ECF3: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x459C64: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4589F9: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453E76: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453B40: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44B610: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4481DD: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x447F7F: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639== 
-==3639== Invalid read of size 4
-==3639==    at 0x4477E3: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==  Address 0x5fd47a4 is 0 bytes after a block of size 20 alloc'd
-==3639==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3639==    by 0x45ECF3: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x459C64: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x45996A: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x454920: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C0E0: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x442570: Integer<int, std::vector<int, std::allocator<int> > >::Integer(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C2FD: operator-(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4482F6: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639== 
-==3639== Invalid read of size 4
-==3639==    at 0x447CD3: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x49ED69: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x499EBB: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x48735A: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x487AD5: testing::TestInfo::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x488095: testing::TestCase::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x48CCEF: testing::internal::UnitTestImpl::RunAllTests() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4A019B: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x49AD15: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==  Address 0x5fea614 is 0 bytes after a block of size 36 alloc'd
-==3639==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3639==    by 0x45ECF3: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x459C64: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4589F9: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453E76: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453B40: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44B610: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4481DD: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x49ED69: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x499EBB: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x48735A: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639== 
-[       OK ] IntegerFixture.multiply_eq_9 (1139 ms)
+==5157== Invalid read of size 4
+==5157==    at 0x447CCF: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==  Address 0x5cb43e4 is 0 bytes after a block of size 20 alloc'd
+==5157==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==5157==    by 0x45ECEF: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x459C60: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4589F5: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453E72: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453B3C: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44B60C: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4481D9: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x447F7B: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157== 
+==5157== Invalid read of size 4
+==5157==    at 0x4477DF: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==  Address 0x5fd47a4 is 0 bytes after a block of size 20 alloc'd
+==5157==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==5157==    by 0x45ECEF: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x459C60: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x459966: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x45491C: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C0DC: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x442570: Integer<int, std::vector<int, std::allocator<int> > >::Integer(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C2F9: operator-(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4482F2: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157== 
+==5157== Invalid read of size 4
+==5157==    at 0x447CCF: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x49ED65: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x499EB7: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x487356: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x487AD1: testing::TestInfo::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x488091: testing::TestCase::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x48CCEB: testing::internal::UnitTestImpl::RunAllTests() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4A0197: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x49AD11: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==  Address 0x5fea614 is 0 bytes after a block of size 36 alloc'd
+==5157==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==5157==    by 0x45ECEF: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x459C60: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4589F5: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453E72: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453B3C: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44B60C: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4481D9: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x411FD7: IntegerFixture_multiply_eq_9_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x49ED65: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x499EB7: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x487356: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157== 
+[       OK ] IntegerFixture.multiply_eq_9 (1155 ms)
 [ RUN      ] IntegerFixture.multiply_eq_10
 [       OK ] IntegerFixture.multiply_eq_10 (5 ms)
 [ RUN      ] IntegerFixture.divide_eq_1
@@ -191,23 +191,23 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.divide_eq_3
 [       OK ] IntegerFixture.divide_eq_3 (5 ms)
 [ RUN      ] IntegerFixture.divide_eq_4
-[       OK ] IntegerFixture.divide_eq_4 (7 ms)
+[       OK ] IntegerFixture.divide_eq_4 (6 ms)
 [ RUN      ] IntegerFixture.divide_eq_5
 [       OK ] IntegerFixture.divide_eq_5 (4 ms)
 [ RUN      ] IntegerFixture.divide_eq_6
-[       OK ] IntegerFixture.divide_eq_6 (5 ms)
+[       OK ] IntegerFixture.divide_eq_6 (4 ms)
 [ RUN      ] IntegerFixture.divide_eq_7
-[       OK ] IntegerFixture.divide_eq_7 (4 ms)
+[       OK ] IntegerFixture.divide_eq_7 (3 ms)
 [ RUN      ] IntegerFixture.divide_eq_8
 [       OK ] IntegerFixture.divide_eq_8 (4 ms)
 [ RUN      ] IntegerFixture.divide_eq_9
-[       OK ] IntegerFixture.divide_eq_9 (4 ms)
+[       OK ] IntegerFixture.divide_eq_9 (3 ms)
 [ RUN      ] IntegerFixture.divide_eq_10
-[       OK ] IntegerFixture.divide_eq_10 (16 ms)
+[       OK ] IntegerFixture.divide_eq_10 (17 ms)
 [ RUN      ] IntegerFixture.mod_eq_1
 [       OK ] IntegerFixture.mod_eq_1 (9 ms)
 [ RUN      ] IntegerFixture.mod_eq_2
-[       OK ] IntegerFixture.mod_eq_2 (4 ms)
+[       OK ] IntegerFixture.mod_eq_2 (5 ms)
 [ RUN      ] IntegerFixture.mod_eq_3
 [       OK ] IntegerFixture.mod_eq_3 (4 ms)
 [ RUN      ] IntegerFixture.mod_eq_4
@@ -219,19 +219,19 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.shift_left_eq_1
 [       OK ] IntegerFixture.shift_left_eq_1 (37 ms)
 [ RUN      ] IntegerFixture.shift_left_eq_2
-[       OK ] IntegerFixture.shift_left_eq_2 (4 ms)
+[       OK ] IntegerFixture.shift_left_eq_2 (5 ms)
 [ RUN      ] IntegerFixture.shift_left_eq_3
 [       OK ] IntegerFixture.shift_left_eq_3 (17 ms)
 [ RUN      ] IntegerFixture.shift_left_eq_4
 [       OK ] IntegerFixture.shift_left_eq_4 (12 ms)
 [ RUN      ] IntegerFixture.shift_right_eq_1
-[       OK ] IntegerFixture.shift_right_eq_1 (43 ms)
+[       OK ] IntegerFixture.shift_right_eq_1 (42 ms)
 [ RUN      ] IntegerFixture.shift_right_eq_2
-[       OK ] IntegerFixture.shift_right_eq_2 (13 ms)
+[       OK ] IntegerFixture.shift_right_eq_2 (14 ms)
 [ RUN      ] IntegerFixture.shift_right_eq_3
 [       OK ] IntegerFixture.shift_right_eq_3 (16 ms)
 [ RUN      ] IntegerFixture.shift_right_eq_4
-[       OK ] IntegerFixture.shift_right_eq_4 (2202 ms)
+[       OK ] IntegerFixture.shift_right_eq_4 (2283 ms)
 [ RUN      ] IntegerFixture.abs_1
 [       OK ] IntegerFixture.abs_1 (3 ms)
 [ RUN      ] IntegerFixture.abs_2
@@ -239,19 +239,19 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.abs_3
 [       OK ] IntegerFixture.abs_3 (3 ms)
 [ RUN      ] IntegerFixture.pow_1
-[       OK ] IntegerFixture.pow_1 (4 ms)
+[       OK ] IntegerFixture.pow_1 (3 ms)
 [ RUN      ] IntegerFixture.pow_2
-[       OK ] IntegerFixture.pow_2 (3 ms)
+[       OK ] IntegerFixture.pow_2 (4 ms)
 [ RUN      ] IntegerFixture.pow_3
-[       OK ] IntegerFixture.pow_3 (4 ms)
+[       OK ] IntegerFixture.pow_3 (3 ms)
 [ RUN      ] IntegerFixture.pow_4
-[       OK ] IntegerFixture.pow_4 (4 ms)
+[       OK ] IntegerFixture.pow_4 (3 ms)
 [ RUN      ] IntegerFixture.pow_5
-[       OK ] IntegerFixture.pow_5 (4 ms)
+[       OK ] IntegerFixture.pow_5 (3 ms)
 [ RUN      ] IntegerFixture.pow_6
-[       OK ] IntegerFixture.pow_6 (7 ms)
+[       OK ] IntegerFixture.pow_6 (6 ms)
 [ RUN      ] IntegerFixture.pow_7
-[       OK ] IntegerFixture.pow_7 (7 ms)
+[       OK ] IntegerFixture.pow_7 (8 ms)
 [ RUN      ] IntegerFixture.f_equals_1
 [       OK ] IntegerFixture.f_equals_1 (4 ms)
 [ RUN      ] IntegerFixture.f_equals_2
@@ -263,15 +263,15 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_not_equals_1
 [       OK ] IntegerFixture.f_not_equals_1 (4 ms)
 [ RUN      ] IntegerFixture.f_not_equals_2
-[       OK ] IntegerFixture.f_not_equals_2 (4 ms)
+[       OK ] IntegerFixture.f_not_equals_2 (5 ms)
 [ RUN      ] IntegerFixture.f_not_equals_3
 [       OK ] IntegerFixture.f_not_equals_3 (4 ms)
 [ RUN      ] IntegerFixture.f_not_equals_4
-[       OK ] IntegerFixture.f_not_equals_4 (5 ms)
+[       OK ] IntegerFixture.f_not_equals_4 (4 ms)
 [ RUN      ] IntegerFixture.f_less_than_1
 [       OK ] IntegerFixture.f_less_than_1 (4 ms)
 [ RUN      ] IntegerFixture.f_less_than_2
-[       OK ] IntegerFixture.f_less_than_2 (5 ms)
+[       OK ] IntegerFixture.f_less_than_2 (4 ms)
 [ RUN      ] IntegerFixture.f_less_than_3
 [       OK ] IntegerFixture.f_less_than_3 (5 ms)
 [ RUN      ] IntegerFixture.f_less_than_eq_1
@@ -279,19 +279,19 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_less_than_eq_2
 [       OK ] IntegerFixture.f_less_than_eq_2 (4 ms)
 [ RUN      ] IntegerFixture.f_less_than_eq_3
-[       OK ] IntegerFixture.f_less_than_eq_3 (5 ms)
+[       OK ] IntegerFixture.f_less_than_eq_3 (4 ms)
 [ RUN      ] IntegerFixture.f_greater_than_1
 [       OK ] IntegerFixture.f_greater_than_1 (4 ms)
 [ RUN      ] IntegerFixture.f_greater_than_2
 [       OK ] IntegerFixture.f_greater_than_2 (4 ms)
 [ RUN      ] IntegerFixture.f_greater_than_3
-[       OK ] IntegerFixture.f_greater_than_3 (4 ms)
+[       OK ] IntegerFixture.f_greater_than_3 (5 ms)
 [ RUN      ] IntegerFixture.f_greater_than_eq_1
 [       OK ] IntegerFixture.f_greater_than_eq_1 (4 ms)
 [ RUN      ] IntegerFixture.f_greater_than_eq_2
 [       OK ] IntegerFixture.f_greater_than_eq_2 (4 ms)
 [ RUN      ] IntegerFixture.f_greater_than_eq_3
-[       OK ] IntegerFixture.f_greater_than_eq_3 (6 ms)
+[       OK ] IntegerFixture.f_greater_than_eq_3 (5 ms)
 [ RUN      ] IntegerFixture.f_plus_1
 [       OK ] IntegerFixture.f_plus_1 (5 ms)
 [ RUN      ] IntegerFixture.f_plus_2
@@ -311,39 +311,39 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_minus_3
 [       OK ] IntegerFixture.f_minus_3 (5 ms)
 [ RUN      ] IntegerFixture.f_minus_4
-[       OK ] IntegerFixture.f_minus_4 (5 ms)
+[       OK ] IntegerFixture.f_minus_4 (4 ms)
 [ RUN      ] IntegerFixture.f_minus_5
-[       OK ] IntegerFixture.f_minus_5 (5 ms)
+[       OK ] IntegerFixture.f_minus_5 (4 ms)
 [ RUN      ] IntegerFixture.f_minus_6
-[       OK ] IntegerFixture.f_minus_6 (5 ms)
+[       OK ] IntegerFixture.f_minus_6 (4 ms)
 [ RUN      ] IntegerFixture.f_minus_7
 [       OK ] IntegerFixture.f_minus_7 (5 ms)
 [ RUN      ] IntegerFixture.f_minus_8
-[       OK ] IntegerFixture.f_minus_8 (5 ms)
+[       OK ] IntegerFixture.f_minus_8 (4 ms)
 [ RUN      ] IntegerFixture.f_minus_9
-[       OK ] IntegerFixture.f_minus_9 (5 ms)
+[       OK ] IntegerFixture.f_minus_9 (4 ms)
 [ RUN      ] IntegerFixture.f_multiply_1
 [       OK ] IntegerFixture.f_multiply_1 (4 ms)
 [ RUN      ] IntegerFixture.f_multiply_2
-[       OK ] IntegerFixture.f_multiply_2 (5 ms)
+[       OK ] IntegerFixture.f_multiply_2 (4 ms)
 [ RUN      ] IntegerFixture.f_multiply_3
-[       OK ] IntegerFixture.f_multiply_3 (4 ms)
+[       OK ] IntegerFixture.f_multiply_3 (5 ms)
 [ RUN      ] IntegerFixture.f_multiply_4
-[       OK ] IntegerFixture.f_multiply_4 (5 ms)
+[       OK ] IntegerFixture.f_multiply_4 (4 ms)
 [ RUN      ] IntegerFixture.f_multiply_5
 [       OK ] IntegerFixture.f_multiply_5 (5 ms)
 [ RUN      ] IntegerFixture.f_multiply_6
-[       OK ] IntegerFixture.f_multiply_6 (4 ms)
+[       OK ] IntegerFixture.f_multiply_6 (5 ms)
 [ RUN      ] IntegerFixture.f_multiply_7
-[       OK ] IntegerFixture.f_multiply_7 (5 ms)
+[       OK ] IntegerFixture.f_multiply_7 (4 ms)
 [ RUN      ] IntegerFixture.f_multiply_8
 [       OK ] IntegerFixture.f_multiply_8 (5 ms)
 [ RUN      ] IntegerFixture.f_multiply_9
-[       OK ] IntegerFixture.f_multiply_9 (1101 ms)
+[       OK ] IntegerFixture.f_multiply_9 (1123 ms)
 [ RUN      ] IntegerFixture.f_divide_1
 [       OK ] IntegerFixture.f_divide_1 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_2
-[       OK ] IntegerFixture.f_divide_2 (4 ms)
+[       OK ] IntegerFixture.f_divide_2 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_3
 [       OK ] IntegerFixture.f_divide_3 (4 ms)
 [ RUN      ] IntegerFixture.f_divide_4
@@ -351,13 +351,13 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_divide_5
 [       OK ] IntegerFixture.f_divide_5 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_6
-[       OK ] IntegerFixture.f_divide_6 (4 ms)
+[       OK ] IntegerFixture.f_divide_6 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_7
-[       OK ] IntegerFixture.f_divide_7 (4 ms)
+[       OK ] IntegerFixture.f_divide_7 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_8
-[       OK ] IntegerFixture.f_divide_8 (4 ms)
+[       OK ] IntegerFixture.f_divide_8 (5 ms)
 [ RUN      ] IntegerFixture.f_divide_9
-[       OK ] IntegerFixture.f_divide_9 (5 ms)
+[       OK ] IntegerFixture.f_divide_9 (4 ms)
 [ RUN      ] IntegerFixture.f_divide_10
 [       OK ] IntegerFixture.f_divide_10 (17 ms)
 [ RUN      ] IntegerFixture.f_mod_1
@@ -381,17 +381,17 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_shift_left_4
 [       OK ] IntegerFixture.f_shift_left_4 (14 ms)
 [ RUN      ] IntegerFixture.f_shift_right_1
-[       OK ] IntegerFixture.f_shift_right_1 (10 ms)
+[       OK ] IntegerFixture.f_shift_right_1 (11 ms)
 [ RUN      ] IntegerFixture.f_shift_right_2
-[       OK ] IntegerFixture.f_shift_right_2 (12 ms)
+[       OK ] IntegerFixture.f_shift_right_2 (13 ms)
 [ RUN      ] IntegerFixture.f_shift_right_3
-[       OK ] IntegerFixture.f_shift_right_3 (16 ms)
+[       OK ] IntegerFixture.f_shift_right_3 (17 ms)
 [ RUN      ] IntegerFixture.f_shift_right_4
-[       OK ] IntegerFixture.f_shift_right_4 (2211 ms)
+[       OK ] IntegerFixture.f_shift_right_4 (2289 ms)
 [ RUN      ] IntegerFixture.ostream_1
 [       OK ] IntegerFixture.ostream_1 (3 ms)
 [ RUN      ] IntegerFixture.ostream_2
-[       OK ] IntegerFixture.ostream_2 (4 ms)
+[       OK ] IntegerFixture.ostream_2 (5 ms)
 [ RUN      ] IntegerFixture.ostream_3
 [       OK ] IntegerFixture.ostream_3 (6 ms)
 [ RUN      ] IntegerFixture.f_abs_1
@@ -399,13 +399,13 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.f_abs_2
 [       OK ] IntegerFixture.f_abs_2 (4 ms)
 [ RUN      ] IntegerFixture.f_abs_3
-[       OK ] IntegerFixture.f_abs_3 (4 ms)
+[       OK ] IntegerFixture.f_abs_3 (3 ms)
 [ RUN      ] IntegerFixture.f_pow_1
-[       OK ] IntegerFixture.f_pow_1 (4 ms)
+[       OK ] IntegerFixture.f_pow_1 (5 ms)
 [ RUN      ] IntegerFixture.f_pow_2
 [       OK ] IntegerFixture.f_pow_2 (4 ms)
 [ RUN      ] IntegerFixture.f_pow_3
-[       OK ] IntegerFixture.f_pow_3 (4 ms)
+[       OK ] IntegerFixture.f_pow_3 (5 ms)
 [ RUN      ] IntegerFixture.f_pow_4
 [       OK ] IntegerFixture.f_pow_4 (4 ms)
 [ RUN      ] IntegerFixture.f_pow_5
@@ -413,60 +413,60 @@ Running main() from gtest_main.cc
 [ RUN      ] IntegerFixture.shift_left_digits_1
 [       OK ] IntegerFixture.shift_left_digits_1 (36 ms)
 [ RUN      ] IntegerFixture.shift_right_digits_1
-[       OK ] IntegerFixture.shift_right_digits_1 (2216 ms)
+[       OK ] IntegerFixture.shift_right_digits_1 (2299 ms)
 [ RUN      ] IntegerFixture.plus_digits_1
 [       OK ] IntegerFixture.plus_digits_1 (17 ms)
 [ RUN      ] IntegerFixture.minus_digits_1
-[       OK ] IntegerFixture.minus_digits_1 (18 ms)
+[       OK ] IntegerFixture.minus_digits_1 (17 ms)
 [ RUN      ] IntegerFixture.multiply_digits_1
-==3639== Invalid read of size 4
-==3639==    at 0x447CD3: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44C34E: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x448328: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44EAA4: __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x435853: IntegerFixture_multiply_digits_1_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x49ED69: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x499EBB: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x48735A: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x487AD5: testing::TestInfo::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x488095: testing::TestCase::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x48CCEF: testing::internal::UnitTestImpl::RunAllTests() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4A019B: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==  Address 0x7c077f4 is 0 bytes after a block of size 36 alloc'd
-==3639==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3639==    by 0x45ECF3: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x459C64: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4589F9: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453E76: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x453B40: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44B610: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x4481DD: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x44EAA4: __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x435853: IntegerFixture_multiply_digits_1_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x49ED69: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639==    by 0x499EBB: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
-==3639== 
-[       OK ] IntegerFixture.multiply_digits_1 (1018 ms)
+==5157== Invalid read of size 4
+==5157==    at 0x447CCF: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44C34A: operator*(Integer<int, std::vector<int, std::allocator<int> > >, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x448324: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44EAA0: __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x435853: IntegerFixture_multiply_digits_1_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x49ED65: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x499EB7: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x487356: testing::Test::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x487AD1: testing::TestInfo::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x488091: testing::TestCase::Run() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x48CCEB: testing::internal::UnitTestImpl::RunAllTests() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4A0197: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==  Address 0x7c077f4 is 0 bytes after a block of size 36 alloc'd
+==5157==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==5157==    by 0x45ECEF: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x459C60: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4589F5: std::vector<int, std::allocator<int> >::_M_default_append(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453E72: std::vector<int, std::allocator<int> >::resize(unsigned long) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x453B3C: Integer<int, std::vector<int, std::allocator<int> > >::basic_multiply(Integer<int, std::vector<int, std::allocator<int> > >&, Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44B60C: Integer<int, std::vector<int, std::allocator<int> > >::pow(int) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x4481D9: Integer<int, std::vector<int, std::allocator<int> > >::operator*=(Integer<int, std::vector<int, std::allocator<int> > > const&) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x44EAA0: __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > multiplies_digits<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x435853: IntegerFixture_multiply_digits_1_Test::TestBody() (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x49ED65: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157==    by 0x499EB7: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in /home/travis/Documents/cs378_STL/integer/cs378-integer/TestInteger)
+==5157== 
+[       OK ] IntegerFixture.multiply_digits_1 (1051 ms)
 [ RUN      ] IntegerFixture.divide_digits_1
 [       OK ] IntegerFixture.divide_digits_1 (18 ms)
 [ RUN      ] IntegerFixture.mersenne_20_vector_timing
-[       OK ] IntegerFixture.mersenne_20_vector_timing (16483 ms)
+[       OK ] IntegerFixture.mersenne_20_vector_timing (16707 ms)
 [ RUN      ] IntegerFixture.mersenne_20_deque_timing
-[       OK ] IntegerFixture.mersenne_20_deque_timing (16707 ms)
-[----------] 169 tests from IntegerFixture (44276 ms total)
+[       OK ] IntegerFixture.mersenne_20_deque_timing (16880 ms)
+[----------] 169 tests from IntegerFixture (44981 ms total)
 
 [----------] Global test environment tear-down
-[==========] 169 tests from 1 test case ran. (44335 ms total)
+[==========] 169 tests from 1 test case ran. (45039 ms total)
 [  PASSED  ] 169 tests.
-==3639== 
-==3639== HEAP SUMMARY:
-==3639==     in use at exit: 0 bytes in 0 blocks
-==3639==   total heap usage: 484,538 allocs, 484,538 frees, 99,222,367 bytes allocated
-==3639== 
-==3639== All heap blocks were freed -- no leaks are possible
-==3639== 
-==3639== For counts of detected and suppressed errors, rerun with: -v
-==3639== ERROR SUMMARY: 221 errors from 4 contexts (suppressed: 0 from 0)
+==5157== 
+==5157== HEAP SUMMARY:
+==5157==     in use at exit: 0 bytes in 0 blocks
+==5157==   total heap usage: 484,538 allocs, 484,538 frees, 99,222,370 bytes allocated
+==5157== 
+==5157== All heap blocks were freed -- no leaks are possible
+==5157== 
+==5157== For counts of detected and suppressed errors, rerun with: -v
+==5157== ERROR SUMMARY: 221 errors from 4 contexts (suppressed: 0 from 0)
 File 'TestInteger.c++'
 Lines executed:100.00% of 767
 Branches executed:70.19% of 4696
@@ -615,7 +615,7 @@ Calls executed:47.37% of 19
 Creating 'basic_string.tcc.gcov'
 
 File 'Integer.h'
-Lines executed:96.18% of 524
+Lines executed:96.37% of 523
 Branches executed:84.86% of 1268
 Taken at least once:54.18% of 1268
 Calls executed:71.20% of 1139
